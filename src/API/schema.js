@@ -4,21 +4,27 @@ export default [
     description: '',
     startingDate: '',
     owner: '',
-    countries: [
-      'Mexico',
-
-    ],
     recomendations: [
       {
         title: '',
         date: '',
         content: '',
+        countries: [
+          'Mexico',
+          'Colombia',
+          'Peru',
+        ],
+
       },
     ],
     risks: [
       {
         type: '',
         level: '',
+        countries: [
+          'Colombia',
+          'Peru',
+        ],
       },
     ],
     Attachments: [],
