@@ -4,7 +4,10 @@ export default  [
         description: '',
         startingDate: '',
         owner: '',
-        countries: [],
+        countries: [
+            'Mexico',
+            
+        ],
         recomendations: [
             {
                 title: '',
