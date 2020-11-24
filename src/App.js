@@ -3,11 +3,10 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import Login from './views/login'
 import Dashboard from './views/dashboard';
 
-function App() {
 
-  const [user, setUser]= useState('');
+  const App = () => {
+    const [user, setUser]= useState('');
 
-  
   return (
     <div className="App">
      
