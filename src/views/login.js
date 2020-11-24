@@ -9,21 +9,17 @@ import './login.css';
 export default function Login() {
   const provider = new firebase.auth.OAuthProvider('microsoft.com');
   provider.addScope('User.Read');
-  // const history = useHistory();
-  // const [user, setUser] = useState();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [disabled, setDisabled] = useState(true);
 
   const funcionAlgo = (prov) => auth.signInWithPopup(prov).then((result) => {
-    // console.log('realmente ke está pazanda');
-    // history.push('/dashboard');
     localStorage.setItem('token', result.credential.accessToken);
     console.log(result.credential.accessToken);
   })
     .catch((error) => {
       console.log(error);
-      // Handle error.
     });
 
   function handleChange(e) {
@@ -39,11 +35,8 @@ export default function Login() {
 
     return signIn(email, password)
       .then((res) => {
-      // localStorage.clear();
         localStorage.setItem('user', email);
         console.log(res);
-      // debugd;
-      // history.push('/dashboard');
       })
       .catch((err) => console.log(err));
   };
