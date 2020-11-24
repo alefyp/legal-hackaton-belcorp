@@ -1,8 +1,16 @@
+.navBar{
+    background-color: #605151;
+}
 .navBar ul {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     list-style: none;
     height: 100vh;
     width: 20%;
+    margin-left: 15%;
+}
+.Logo{
+    width: 90px;
 }

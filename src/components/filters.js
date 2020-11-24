@@ -1,4 +1,6 @@
 import React from 'react';
+import Grid from '../Assets/Icons/grid.svg';
+import List from '../Assets/Icons/list.svg';
 
 export default function Filters() {
   return (
@@ -11,8 +13,8 @@ export default function Filters() {
           <option>Riesgo Medio</option>
           <option>Riesgo Bajo</option>
         </select>
-        <button type="button">lista</button>
-        <button type="button">Cuadricula</button>
+        <button type="button"><img src={List} alt="List" /></button>
+        <button type="button"><img src={Grid} alt="Grid" /></button>
       </nav>
     </div>
   );
