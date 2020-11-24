@@ -17,7 +17,7 @@
     },
     "plugins": [ "react"],
     "rules": {
-
+      "linebreak-style":"warn",
       "react/jsx-closing-bracket-location": 0,
       "react/jsx-filename-extension": [1, {
         "extensions": [".js", ".jsx"]}

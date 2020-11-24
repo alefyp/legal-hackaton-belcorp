@@ -1,34 +1,12 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './views/login';
-import Dashboard from './views/dashboard';
 
-const App = () => {
+export default function App() {
   const [user, setUser] = useState('');
-
+  const [password, setPassword] = useState('');
   return (
     <div className="App">
-
-      <BrowserRouter>
-        <div>
-          <Switch>
-            <Route exact path="/">
-              {' '}
-              <Login user={user} setUser={setUser} />
-            </Route>
-            {/* Public Page */}
-            <Route path="/dashboard">
-              {' '}
-              <Dashboard />
-            </Route>
-            {' '}
-            {/* //already login */}
-          </Switch>
-        </div>
-      </BrowserRouter>
-
+      <Login user={user} setUser={setUser} password={password} setPassword={setPassword} />
     </div>
   );
-};
-
-export default App;
+}

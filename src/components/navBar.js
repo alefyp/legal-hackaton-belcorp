@@ -9,8 +9,9 @@ export default function NavBar() {
       <nav className="navBar">
         <ul>
           <li>Proyectos</li>
-          <li>Nuevo Proyectos</li>
-          <li>Usuario</li>
+          <li>Agregar</li>
+          <li>Perfil</li>
+          <li>Salir</li>
         </ul>
       </nav>
     </>

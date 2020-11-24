@@ -1,0 +1,14 @@
+.upperBar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.upperBar ul {
+    display: flex;
+    flex-direction:row;
+    list-style:none;
+}
+
+.upperBar ul li {
+    margin-left: 20px;
+}

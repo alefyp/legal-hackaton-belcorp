@@ -5,33 +5,32 @@ import auth from '../firebaseInit';
 
 import './login.css';
 
-export default function Login({ history, user, setUser }) {
+export default function Login({ user, setUser, password, setPassword }) {
   const provider = new firebase.auth.OAuthProvider('microsoft.com');
   provider.addScope('User.Read');
 
-  const funcionAlgo = (prov) => {
-    console.log(provider);
-    return auth.signInWithPopup(prov)
+  async function signinOutlook(prov) {
+    try {
+      const result = await auth.signInWithPopup(prov);
+      console.log(result);
+      console.log(result.additionalUserInfo.profile, result.credential.idToken);
+      return result;
+    } catch (error) {
+      const errorMessage = error.message;
+      return errorMessage;
+    }
+  }
 
-      .then((result) => {
-        console.log('realmente ke está pazanda');
-        console.log(result);
-        console.log(result.additionalUserInfo.profile, result.credential.idToken);
-        console.log(firebase.auth.UserCredential);
-        // User is signed in.
-        // IdP data available in result.additionalUserInfo.profile.
-        // OAuth access token can also be retrieved:
-        // result.credential.accessToken
-        // OAuth ID token can also be retrieved:
-        // result.credential.idToken
-      })
-      .catch((error) => {
-        console.log(error);
-        // Handle error.
-      });
-  };
+  async function signInEmailAndPassword(email, pass) {
+    try {
+      const signInUser = await firebase.auth().signInWithEmailAndPassword(email, pass);
+      return signInUser;
+    } catch (error) {
+      const errorMessage = error.message;
+      return errorMessage;
+    }
+  }
 
-  console.log(user);
   return (
     <>
       <form className="login-form">
@@ -42,10 +41,10 @@ export default function Login({ history, user, setUser }) {
 
         <label htmlFor="user-password">
           Contraseña:
-          <input className="user-password" />
+          <input className="user-password" onBlur={(e) => setPassword(e.target.value)} />
         </label>
-        <button type="button" onClick={() => history.push('/dashboard')}>Log in</button>
-        <button type="button" onClick={() => funcionAlgo(provider)}>Outlook</button>
+        <button type="button" onClick={() => signInEmailAndPassword(user, password)}>Log in</button>
+        <button type="button" onClick={() => signinOutlook(provider)}>Outlook</button>
       </form>
     </>
   );
