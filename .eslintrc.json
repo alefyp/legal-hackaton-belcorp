@@ -3,7 +3,7 @@
       "browser": true,
       "es6": true
     },
-    "extends": ["airbnb", "plugin:prettier/recommended", "plugin:react/recommended"],
+    "extends": ["airbnb",  "plugin:react/recommended"],
     "globals": {
       "Atomics": "readonly",
       "SharedArrayBuffer": "readonly"
@@ -15,10 +15,9 @@
       "ecmaVersion": 11,
       "sourceType": "module"
     },
-    "plugins": ["prettier", "react"],
+    "plugins": [ "react"],
     "rules": {
-      "consistent-return": 0,
-      "prettier/prettier": "error",
+
       "react/jsx-closing-bracket-location": 0,
       "react/jsx-filename-extension": [1, {
         "extensions": [".js", ".jsx"]}
