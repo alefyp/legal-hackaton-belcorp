@@ -13,7 +13,7 @@ export default function UpperBar() {
           <li><img src={AddFile} alt="addFile" /></li>
           <li><img src={Bell} alt="alert-bell" /></li>
           <li>imag</li>
-          <li>user</li>
+          <li>Alexandra Sallieri</li>
         </ul>
       </nav>
     </>

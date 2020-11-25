@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { signOut } from '../API/authentications';
 import NavBar from '../components/navBar';
 import UpperBar from '../components/upperBar';
 import Filters from '../components/filters';
 import './dashboard.css';
+import ProjectsCard from '../components/projectCards';
+import UpdateCard from '../components/updateCard';
 
 export default function Dashboard() {
   return (
@@ -12,15 +13,22 @@ export default function Dashboard() {
       <NavBar />
       <div className="Container-upper">
         <UpperBar />
-        <h2>Proyectos</h2>
-        <Filters />
+        <div className="container-sections">
+          <section className="container-projects">
+            <div className="header-projects">
+              <h2>Proyectos</h2>
+              <Filters />
+            </div>
+            <div className="card-container">
+              <ProjectsCard />
+            </div>
+          </section>
+          <section className="container-updates">
+            <h2>Actualizaciones</h2>
+            <UpdateCard />
+          </section>
+        </div>
       </div>
-      <button
-        type="button"
-        onClick={signOut}>
-        signOut
-
-      </button>
     </div>
   );
 }
