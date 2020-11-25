@@ -1,26 +1,28 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import { signOut } from '../API/authentications';
+import React, { useState } from 'react';
+// import { signOut } from '../API/authentications';
 import NavBar from '../components/navBar';
 import UpperBar from '../components/upperBar';
-import Filters from '../components/filters';
+// import Filters from '../components/filters';
 import './dashboard.css';
 
 export default function Dashboard() {
+  const [viewComponent, setViewComponent] = useState([]);
   return (
     <div className="container-dashboard">
-      <NavBar />
+      {/* <NavBar  /> */}
+      <NavBar viewComponent={viewComponent} setViewComponent={setViewComponent} />
       <div className="Container-upper">
         <UpperBar />
         <h2>Proyectos</h2>
-        <Filters />
+        {/* <Filters /> */}
       </div>
-      <button
+      {/* <button
         type="button"
         onClick={signOut}>
         signOut
 
-      </button>
+      </button> */}
     </div>
   );
 }
