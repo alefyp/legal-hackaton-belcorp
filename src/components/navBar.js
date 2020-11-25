@@ -1,18 +1,69 @@
-// Any component that wants auth state
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+} from 'react-router-dom';
+import Logo from '../Assets/Icons/Logo-Belcorp.svg';
+import Proyectos from '../Assets/Icons/Proyectos.svg';
+import Agregar from '../Assets/Icons/Agregar.svg';
+import Perfil from '../Assets/Icons/Perfil.svg';
+import Salir from '../Assets/Icons/Salir.svg';
+import Filters from './filters';
+import { signOut } from '../API/authentications';
 
 import './navBar.css';
 
-export default function NavBar() {
+export default function NavBar(viewComponent, setViewComponent) {
+  console.log(viewComponent, setViewComponent);
   return (
-    <>
+    <Router>
       <nav className="navBar">
         <ul>
-          <li>Proyectos</li>
-          <li>Nuevo Proyectos</li>
-          <li>Usuario</li>
+          <li>
+            <Link to="/dashboard">
+              <img src={Logo} alt="Logo" className="Logo" />
+            </Link>
+          </li>
+          <li>
+            <Link to="/dashboard">
+              <img src={Proyectos} alt="Proyectos" />
+
+            </Link>
+          </li>
+          <li>
+            <Link to="/Agregar">
+              <img src={Agregar} alt="Agregar" />
+            </Link>
+          </li>
+          <li>
+            <Link to="/Perfil">
+              <img src={Perfil} alt="Perfil" />
+            </Link>
+          </li>
+          <li
+            onClick={signOut}
+            role="presentation"
+            >
+            <img src={Salir} alt="Salir" />
+          </li>
         </ul>
       </nav>
-    </>
+      <Switch>
+        <Route exact path="/dashboard">
+          <Filters />
+        </Route>
+        <Route path="/Agregar">
+          <h2>/Agregar</h2>
+        </Route>
+        <Route path="/Perfil">
+          <h2>/Perfil</h2>
+        </Route>
+        {/* <Route path="/Salir">
+          <h2>/Salir</h2>
+        </Route> */}
+      </Switch>
+    </Router>
   );
 }

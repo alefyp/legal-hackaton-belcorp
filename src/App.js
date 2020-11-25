@@ -40,6 +40,7 @@ function NonLoggedInRoute({ children, isUserLoggedIn, ...rest }) {
 function App() {
   // valor inicial de isUserLoggedIn es false
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -56,6 +57,7 @@ function App() {
         console.log('no está logueado');
       }
       setLoading(false);
+      return console.log('CLEAN UP Funtion');
     });
   }, []);
 
@@ -69,37 +71,18 @@ function App() {
         <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dasboard">
           <Dashboard />
         </LoggedInRoute>
+        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/Agregar">
+          <Dashboard />
+        </LoggedInRoute>
+        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/Perfil">
+          <Dashboard />
+        </LoggedInRoute>
+        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dasboard:id">
+          <Dashboard />
+        </LoggedInRoute>
       </Switch>
     </Router>
   );
 }
-
-// const App = () => {
-//   const [user, setUser] = useState('');
-
-//   return (
-//     <div className="App">
-
-//       <BrowserRouter>
-//         <div>
-//           <Switch>
-//             <Route exact path="/">
-//               {' '}
-//               <Login user={user} setUser={setUser} />
-//             </Route>
-//             {/* Public Page */}
-//             <Route path="/dashboard">
-//               {' '}
-//               <Dashboard />
-//             </Route>
-//             {' '}
-//             {/* //already login */}
-//           </Switch>
-//         </div>
-//       </BrowserRouter>
-
-//     </div>
-//   );
-// };
 
 export default App;
