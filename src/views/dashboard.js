@@ -7,11 +7,10 @@ import UpperBar from '../components/upperBar';
 import './dashboard.css';
 
 export default function Dashboard() {
-  const [viewComponent, setViewComponent] = useState([]);
   return (
     <div className="container-dashboard">
       {/* <NavBar  /> */}
-      <NavBar viewComponent={viewComponent} setViewComponent={setViewComponent} />
+      <NavBar />
       <div className="Container-upper">
         <UpperBar />
         <h2>Proyectos</h2>

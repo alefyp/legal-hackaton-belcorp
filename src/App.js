@@ -77,6 +77,9 @@ function App() {
         <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/Perfil">
           <Dashboard />
         </LoggedInRoute>
+        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dasboard:id">
+          <Dashboard />
+        </LoggedInRoute>
       </Switch>
     </Router>
   );
