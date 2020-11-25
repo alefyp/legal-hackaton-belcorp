@@ -40,18 +40,13 @@ function NonLoggedInRoute({ children, isUserLoggedIn, ...rest }) {
 function App() {
   // valor inicial de isUserLoggedIn es false
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        // const {
-        //   displayName, email, emailVerified, photoURL, uid,
-        // } = user;
+        localStorage.setItem('newUser', JSON.stringify(user));
         setIsUserLoggedIn(true);
-
-        console.log(user);
       } else {
         setIsUserLoggedIn(false); // cambiar a false
         console.log('no está logueado');

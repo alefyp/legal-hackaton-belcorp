@@ -1,6 +1,6 @@
 import React from 'react';
 import './projectCard.css';
-import Store from '../Assets/Icons/storestore.svg';
+import Store from '../Assets/Icons/Logotype.svg';
 
 export default function ProjectCards() {
   return (

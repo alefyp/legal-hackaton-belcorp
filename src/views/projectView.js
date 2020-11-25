@@ -1,8 +1,9 @@
 import React from 'react';
 import Filters from '../components/filters';
-import './projectView.css';
-import ProjectsCard from '../components/projectCards';
+import ProjectsList from '../components/projectList';
 import UpdateCard from '../components/updateCard';
+import './projectView.css';
+import Lupita from '../Assets/Icons/Lupa.svg';
 
 export default function ProjectView() {
   return (
@@ -13,11 +14,16 @@ export default function ProjectView() {
           <Filters />
         </div>
         <div className="card-container">
-          <ProjectsCard />
+          <ProjectsList />
+          <ProjectsList />
+          <ProjectsList />
         </div>
       </section>
       <section className="container-updates">
-        <h2>Actualizaciones</h2>
+        <div className="container-header-updates">
+          <h2>Actualizaciones</h2>
+          <button type="button"><img src={Lupita} alt="search-update" /></button>
+        </div>
         <UpdateCard />
       </section>
     </div>
