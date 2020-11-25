@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.project-details {
+  /* background-color: aquamarine; */
+  display: flex;
+  grid-area: 2/ 2/ 13/13;
+  padding: 1rem;
+}
+.inlineBlocks {
+  display: inline;
+  margin-right: 1rem;
+}
+.titleStyle {
+  font-weight: 200;
+}
+
+.subtitleStyle {
+  color: #786565;
+  margin: 1rem 0;
+}
+.scrolling-Box {
+  overflow-x: auto;
+  color: #786565;
+  font-size: 1rem;
+  height: 8rem;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+}
+.scrolling-Box::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.scrolling-Box::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.scrolling-Box::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.description-details {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.1rem solid #786565;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 0.5rem;
+}
+.description-details span {
+  margin-right: 3rem;
+}
+.description-details h6 {
+  text-transform: uppercase;
+  margin-right: 1rem;
+}
+.subtitle-description {
+  /* margin: 0.3rem 0; */
+  color: #786565;
+  font-size: 0.5rem;
+}
+.button-box-layout {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.details-button {
+  padding: 0.5rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+.back {
+  background-color: #ffffff;
+}
+.download {
+  background-color: #a6b2c8;
+}

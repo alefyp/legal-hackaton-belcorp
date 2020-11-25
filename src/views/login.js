@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import firebase from 'firebase/app';
-import auth from '../firebaseInit';
+import { auth } from '../firebaseInit';
 import { signIn } from '../API/authentications';
 
 import './login.css';
