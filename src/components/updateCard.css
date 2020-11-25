@@ -1,0 +1,11 @@
+.container-update{
+    width: 100%;
+    box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.2);
+    border-bottom: rgba(131, 131, 131, 0.829);
+    border-radius: 10px;
+}
+.user-updates{
+    display: flex;
+    margin:0 10px 0 10px;
+    justify-content: space-around;
+}

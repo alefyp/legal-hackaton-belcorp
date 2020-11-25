@@ -1,0 +1,39 @@
+.conatiner-filters{
+    display: flex;
+}
+
+.search-input{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    margin:0 20px 0 20px;
+    border-color: #C4C4C4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.search-input input {
+    font-size: 1.2em;
+    border: none;
+    box-shadow: none;
+}
+
+.select-filter{
+    height: 50px;
+    font-size: 1.2em;
+    margin:0 20px 0 20px;
+    border-radius: 10px;
+    border-color: #C4C4C4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-grid, .btn-list{
+    height: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin:0 10px 0 10px;  
+}
+.btn-grid img, .btn-list img{ 
+    height: 30px;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-import './projectCard.css';
+import './projectList.css';
 import Store from '../Assets/Icons/storestore.svg';
 
 export default function ProjectCards() {
   return (
-    <div className="container-project">
+    <div className="container-list">
       <div className="container-img"><img src={Store} alt="icono" /></div>
       <h3>Nombre del proyecto</h3>
       <h4>Fecha Lanzamiento:</h4>

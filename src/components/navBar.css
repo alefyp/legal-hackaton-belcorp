@@ -1,16 +1,36 @@
-.navBar{
+/* .navBar{
     background-color: #605151;
-}
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+} */
 .navBar ul {
+    background-color: #605151;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 8vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    align-content: center;
+    justify-content: space-evenly;
     list-style: none;
-    height: 100vh;
-    width: 20%;
-    margin-left: 15%;
+    text-align: center;
+    font-size: 16px;
 }
+
+.navBar li{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
 .Logo{
-    width: 90px;
+    width: 100%;
+}
+
+.icon{
+    width: 100%;
 }
