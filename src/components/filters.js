@@ -7,7 +7,7 @@ import './filters.css';
 
 export default function Filters() {
   return (
-    <div className="conatiner-filters">
+    <div className="container-filters">
       <div className="search-input">
         <img src={Lupita} alt="Buscar" />
         <input placeholder="Buscar por nombre" className="search-input" />

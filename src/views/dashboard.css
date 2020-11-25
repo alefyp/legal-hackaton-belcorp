@@ -1,8 +1,15 @@
 .container-dashboard{
-    display: flex;
-    position: fixed;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
+
+/* navbar hijo1 */
 .Container-upper{
-    width: 100%;
+   grid-area: 1 / 2 / 2 / 13;
 }
 

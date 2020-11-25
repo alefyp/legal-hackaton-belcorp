@@ -1,9 +1,9 @@
-.conatiner-filters{
+.container-filters{
     display: flex;
 }
 
 .search-input{
-    height: 50px;
+    height: 40px;
     display: flex;
     align-items: center;
     border-radius: 50px;
@@ -13,13 +13,13 @@
 }
 
 .search-input input {
-    font-size: 1.2em;
+    font-size: 1.1em;
     border: none;
     box-shadow: none;
 }
 
 .select-filter{
-    height: 50px;
+    height: 40px;
     font-size: 1.2em;
     margin:0 20px 0 20px;
     border-radius: 10px;
@@ -28,7 +28,7 @@
 }
 
 .btn-grid, .btn-list{
-    height: 50px;
+    height: 40px;
     background: none;
     border: none;
     cursor: pointer;

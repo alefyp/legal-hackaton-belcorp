@@ -1,6 +1,7 @@
 .container-sections{
-    display:flex;
-    height: 90vh;
+    grid-area: 2 / 2 / 13 / 13;
+    display: flex;
+
 }
 
 .container-projects h2{
@@ -9,8 +10,9 @@
 }
 
 .container-projects{
+    /* no cambies este 70% */
     width: 70%;
-    margin:20px;
+    padding: 20px;
 }
 
 .header-projects{
@@ -27,6 +29,6 @@
 }
 
 .container-updates{
-    margin: 20px;
-    width: 20%;
+    /* no cambies este 30% */
+    width: 30%; 
 }
