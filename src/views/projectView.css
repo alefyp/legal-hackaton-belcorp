@@ -1,0 +1,32 @@
+.container-sections{
+    display:flex;
+    height: 90vh;
+}
+
+.container-projects h2{
+    margin:0;
+    font-size: 2em;
+}
+
+.container-projects{
+    width: 70%;
+    margin:20px;
+}
+
+.header-projects{
+    display: flex;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: auto;
+    height: 75vh;
+    margin: 10px 0;
+}
+
+.container-updates{
+    margin: 20px;
+    width: 20%;
+}
