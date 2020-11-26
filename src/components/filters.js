@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import Select from 'react-select';
 import Grid from '../Assets/Icons/grid.svg';
 import List from '../Assets/Icons/list.svg';
@@ -8,8 +8,9 @@ import Lupita from '../Assets/Icons/Lupa.svg';
 import './filters.css';
 
 export default function Filters({
-  setGrid, setList, setSearch, search, project, setProject,
+  setGrid, setList, project, setProject, Api,
 }) {
+  const [search, setSearch] = useState('');
   const options = [
     { label: 'Mostrar todos' },
     {
@@ -39,10 +40,18 @@ export default function Filters({
     },
   ];
 
+  const searchFunc = (busqueda, api) => {
+    if (busqueda !== '') {
+      return project.filter((prj) => prj.name.includes(search));
+    }
+    return api;
+  };
+
   const filterFunc = (event, type) => {
     if (type === 'Tipo') {
       // eslint-disable-next-line max-len
-      setProject(project.map((risk) => risk.risks.filter((typeRisk) => typeRisk.type.includes(event))));
+      const arrRisk = setProject(project.map((risk) => risk.risks.filter((typeRisk) => typeRisk.type.includes(event))));
+      console.log(arrRisk);
     }
     if (type === 'Nivel') {
       // eslint-disable-next-line max-len
@@ -58,7 +67,7 @@ export default function Filters({
     <div className="container-filters">
       <div className="search-input">
         <img src={Lupita} alt="Buscar" />
-        <input placeholder="Buscar por nombre" className="search-input" onChange={async (e) => { setSearch(e.target.value); setProject(project.filter((prj) => prj.name.includes(search))); }} />
+        <input placeholder="Buscar por nombre" className="search-input" onChange={async (e) => { e.persist(); setSearch(e.target.value); setProject(searchFunc(search, Api)); }} />
       </div>
       <Select
         className="select-filter"

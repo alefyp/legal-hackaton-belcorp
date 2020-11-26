@@ -15,7 +15,6 @@ export default function ProjectView() {
   const [grid, setGrid] = useState(true);
   const [list, setList] = useState(false);
   const [project, setProject] = useState(api);
-  const [search, setSearch] = useState('');
   const [level, setLevel] = useState('');
   const [kind, setKind] = useState('');
   const [sort, setSort] = useState('');
@@ -33,10 +32,9 @@ export default function ProjectView() {
         <div className="header-projects">
           <h2>Proyectos</h2>
           <Filters
+            Api={api}
             setGrid={setGrid}
             setList={setList}
-            setSearch={setSearch}
-            search={search}
             project={project}
             setProject={setProject}
             level={level}
@@ -54,7 +52,6 @@ export default function ProjectView() {
           {list === true && grid === false ? project.map((proj) => (
             <ProjectsList key={`${proj.name}List`} project={proj} />
           )) : null}
-          {search}
         </div>
       </section>
       <section className="container-updates">
