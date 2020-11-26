@@ -28,10 +28,10 @@ export default function ProjectView() {
   // const [project, setProject] = useState([]);
 
   const api = schema;
-  console.log(api);
   const [grid, setGrid] = useState(true);
   const [list, setList] = useState(false);
-  const [project, setProject] = useState(api);
+  const [project, setProject] = useState([]);
+  const [search, setSearch] = useState('');
   const [level, setLevel] = useState('');
   const [kind, setKind] = useState('');
   const [sort, setSort] = useState('');
@@ -42,7 +42,6 @@ export default function ProjectView() {
       setProject(proyectos);
     });
   }, []); */
-  console.log(project);
   return (
     <div className="container-sections">
       <section className="container-projects">
@@ -52,8 +51,9 @@ export default function ProjectView() {
             Api={api}
             setGrid={setGrid}
             setList={setList}
-            project={project}
+            search={search}
             setProject={setProject}
+            setSearch={setSearch}
             level={level}
             kind={kind}
             sort={sort}

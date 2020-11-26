@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import Select from 'react-select';
 import Grid from '../Assets/Icons/grid.svg';
 import List from '../Assets/Icons/list.svg';
@@ -8,9 +8,8 @@ import Lupita from '../Assets/Icons/Lupa.svg';
 import './filters.css';
 
 export default function Filters({
-  setGrid, setList, project, setProject, Api,
+  setGrid, setList, search, setSearch, Api, setProject,
 }) {
-  const [search, setSearch] = useState('');
   const options = [
     { label: 'Mostrar todos' },
     {
@@ -40,34 +39,37 @@ export default function Filters({
     },
   ];
 
-  const searchFunc = (busqueda, api) => {
-    if (busqueda !== '') {
-      return project.filter((prj) => prj.name.includes(search));
-    }
-    return api;
+  const searchFunc = () => {
+    const filtroBusqueda = Api.filter((prj) => prj.name.includes(search));
+    console.log(filtroBusqueda);
+    return setProject(filtroBusqueda);
   };
 
   const filterFunc = (event, type) => {
     if (type === 'Tipo') {
       // eslint-disable-next-line max-len
-      const arrRisk = setProject(project.map((risk) => risk.risks.filter((typeRisk) => typeRisk.type.includes(event))));
+      const arrRisk = Api.map((risk) => risk.risks.filter((typeRisk) => typeRisk.type.includes(event)));
       console.log(arrRisk);
     }
     if (type === 'Nivel') {
       // eslint-disable-next-line max-len
-      setProject(project.map((risk) => risk.risks.filter((typeRisk) => typeRisk.level.includes(event))));
+      Api.map((risk) => risk.risks.filter((typeRisk) => typeRisk.level.includes(event)));
     }
     if (type === 'Cronologico') {
       // eslint-disable-next-line max-len
-      setProject(project.map((risk) => risk.sort()));
+      Api.map((risk) => risk.sort());
     }
     console.log(event);
   };
+
+  useEffect(() => {
+    setProject(Api);
+  }, [setSearch, search]);
   return (
     <div className="container-filters">
       <div className="search-input">
         <img src={Lupita} alt="Buscar" />
-        <input placeholder="Buscar por nombre" className="search-input" onChange={async (e) => { e.persist(); setSearch(e.target.value); setProject(searchFunc(search, Api)); }} />
+        <input placeholder="Buscar por nombre" className="search-input" value={search} onChange={async (e) => { e.persist(); await setSearch(e.target.value); console.log(e.target.value); searchFunc(); }} />
       </div>
       <Select
         className="select-filter"
