@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import Agregar from '../Assets/Icons/add-icon-black.svg';
 import Thrash from '../Assets/Icons/trash.svg';
 import './addingRisk.css';
@@ -19,6 +19,23 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
     'Riesgo de Libre Competencia'];
 
   const riskLevel = ['Riesgo Alto', 'Riesgo Medio', 'Riesgo Bajo'];
+
+  const [addRiskRow, setAddRiskRow] = useState(0);
+
+  // const [riskArray, setRiskArray] = useState([]);
+  const temporalRisk = {};
+
+  const newRisk = (e, key) => {
+    temporalRisk[key] = e.target.value;
+    console.log(temporalRisk);
+  };
+
+  const addNewRiskRow = () => {
+    console.log('y ahora qué vergas hago');
+    setAddRiskRow(addRiskRow + 1);
+  };
+
+  handleRisks(newRisk);
   // const [riskTableRows, setriskTableRows] = useState([]);
   // AQUÍ HAGO MI ROW, VAMOS A VER SI NO TERMINO LLORANDO AAAAAAAAAAAH
   return (
@@ -32,8 +49,9 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
       <label htmlFor="risk-countries">
         PAÍSES
         <select
+          required
           className="adding-risk-countries"
-          onChange={(e) => { handleRisks(e, 'countries'); }}>
+          onChange={(e) => { newRisk(e, 'countries'); }}>
           <option hidden value="">Selecciona un país</option>
           <option value="Peru">Perú</option>
           <option value="Colombia">Colombia</option>
@@ -61,8 +79,9 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
               <td>
                 <label htmlFor="adding-risk-type">
                   <select
+                    required
                     className="adding-risk-type"
-                    onChange={(e) => { handleRisks(e, 'type'); }}>
+                    onChange={(e) => { newRisk(e, 'type'); }}>
                     <option hidden value="">Elije una opción</option>
                     {riskTypes.map((risk) => (
                       <option key={`${risk}`}>{risk}</option>
@@ -74,8 +93,9 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
               <td>
                 <label htmlFor="adding-risk-level">
                   <select
+                    required
                     className="adding-risk-level"
-                    onChange={(e) => { handleRisks(e, 'level'); }}>
+                    onChange={(e) => { newRisk(e, 'level'); }}>
                     {riskLevel.map((risk) => (
                       <option key={`${risk}`}>{risk}</option>
                     ))}
@@ -86,8 +106,9 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
               <td>
                 <label htmlFor="adding-risk-date">
                   <input
+                    required
                     className="adding-risk-date"
-                    onChange={(e) => { handleRisks(e, 'date'); }}
+                    onChange={(e) => { newRisk(e, 'date'); }}
                     type="date" />
                 </label>
               </td>
@@ -97,6 +118,7 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
                   className="adding-risk-checkbox-container"
                   htmlFor="adding-risk-checkbox">
                   <input
+                    required
                     className="adding-risk-checkbox"
                     type="checkbox" />
                   <span className="adding-risk-checkmark" />
@@ -105,7 +127,8 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
 
               <td>
                 <input
-                  onChange={(e) => { handleRisks(e, 'projectleader'); }}
+                  required
+                  onChange={(e) => { newRisk(e, 'projectleader'); }}
                   type="text"
                   placeholder="Persona o área" />
               </td>
@@ -118,7 +141,7 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
             </tr>
           </tbody>
         </table>
-        <button type="button" className="new-line-add-risk">
+        <button type="button" className="new-line-add-risk" onClick={() => addNewRiskRow()}>
           <img className="add-risk-add-new" src={Agregar} alt="add-new" />
           AGREGAR NUEVA LÍNEA
         </button>
@@ -154,7 +177,7 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
           haciendo clic en el boton GRABAR Y AGREGAR NUEVO, de lo contrario puedes GRABAR.
         </p>
         <button type="button">GRABAR Y AGREGAR NUEVO</button>
-        <button onClick={() => addNewRisk()} type="button">GRABAR</button>
+        <button onClick={() => addNewRisk(temporalRisk)} type="button">GRABAR</button>
       </div>
     </div>
   );
