@@ -1,0 +1,28 @@
+.table-reco {
+  width: 85%;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  border-collapse: collapse;
+}
+.details-button {
+  padding: 0.5rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+.back {
+  background-color: #ffffff;
+}
+.table-reco td {
+  /* background-color: chartreuse; */
+  /* border-bottom: 0.5rem solid #786565; */
+  margin-top: 1.5rem 0;
+  text-align: center;
+  line-height: 3;
+  border-bottom: 1px solid #c4c4c4;
+}
+.table-button {
+  border: none;
+  background-color: #ffffff;
+  text-decoration: underline;
+}
