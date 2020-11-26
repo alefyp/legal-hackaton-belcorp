@@ -16,9 +16,15 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
     'Riesgo de Libre Competencia'];
 
   const riskLevel = ['Riesgo Alto', 'Riesgo Medio', 'Riesgo Bajo'];
+
   return (
-    <>
+    <div className="adding-project-new-risk">
+      <p>
+        En esta sección recuerda que puedes registrar, clasificar riesgos y
+        adjuntar documentos por país
+      </p>
       <p className="adding-risk-aux_text">1 de 3 Asignar País</p>
+
       <label htmlFor="risk-countries">
         PAÍSES
         <select
@@ -31,7 +37,9 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
           <option value="Brazil">Brasil</option>
         </select>
       </label>
+
       <p className="adding-risk-aux_text">2 de 3 Asignar Riesgos</p>
+
       <div className="risk-table">
         <table>
           <thead>
@@ -58,6 +66,7 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
                   </select>
                 </label>
               </td>
+
               <td>
                 <label htmlFor="adding-risk-level">
                   <select
@@ -69,6 +78,7 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
                   </select>
                 </label>
               </td>
+
               <td>
                 <label htmlFor="adding-risk-date">
                   <input
@@ -77,6 +87,7 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
                     type="date" />
                 </label>
               </td>
+
               <td>
                 <label
                   className="adding-risk-checkbox-container"
@@ -87,19 +98,23 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
                   <span className="adding-risk-checkmark" />
                 </label>
               </td>
+
               <td>
                 <input
                   onChange={(e) => { handleRisks(e, 'projectleader'); }}
                   type="text"
                   placeholder="Persona o área" />
               </td>
+
               <td>
                 eli
               </td>
+
             </tr>
           </tbody>
         </table>
       </div>
+
       <p className="adding-risk-aux_text">3 de 3 Adjuntar Documentos</p>
       <input type="file" />
       <div className="adding-risk-grabar-section">
@@ -111,6 +126,6 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
         <button type="button">GRABAR Y AGREGAR NUEVO</button>
         <button onClick={() => addNewRisk()} type="button">GRABAR</button>
       </div>
-    </>
+    </div>
   );
 }

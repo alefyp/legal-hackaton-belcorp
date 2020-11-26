@@ -35,8 +35,10 @@ export default function addingProject() {
 
   return (
     <div className="container-adding-project">
+
       <h2>NUEVO PROYECTO</h2>
       <form onSubmit={handleSubmit} className="adding-project-form">
+
         <label htmlFor="project-name">
           NOMBRE
           <input
@@ -46,6 +48,7 @@ export default function addingProject() {
             onChange={(e) => { handleChanges(e, 'name'); }}
           />
         </label>
+
         <label htmlFor="project-description">
           DESCRIPCIÓN
           <textarea
@@ -53,6 +56,7 @@ export default function addingProject() {
             placeholder="Cuéntanos más acerca del proyecto"
             className="project-description" />
         </label>
+
         <div className="adding-project-client_area_date-section">
           <label htmlFor="project-client-name">
             CLIENTE
@@ -62,6 +66,7 @@ export default function addingProject() {
               type="text"
               className="project-client-name" />
           </label>
+
           <label htmlFor="project-area">
             ÁREA
             <input
@@ -70,6 +75,7 @@ export default function addingProject() {
               type="text"
               className="project-area" />
           </label>
+
           <label htmlFor="project-start-date">
             FECHA DE LANZAMIENTO
             <input
@@ -78,6 +84,7 @@ export default function addingProject() {
               className="project-start-date" />
           </label>
         </div>
+
         <label htmlFor="project-recomendation">
           RECOMENDACIÓN
           <textarea
@@ -85,35 +92,16 @@ export default function addingProject() {
             placeholder="Escribe la recomendación inicial para este proyecto"
             className="project-recomendation" />
         </label>
-        <div className="adding-project-new-risk">
-          <p>
-            En esta sección recuerda que puedes registrar, clasificar riesgos y
-            adjuntar documentos por país
-          </p>
-          <AddingRisk handleRisks={handleRisks} addNewRisk={addNewRisk} />
-          <div className="adding-project-risks-table">
-            <table>
-            <thead>
-              <tr>
-                <th>
-                  Documento
-                  Fecha
-                  Agregado por
-                  Tipo
-                  Opciones
-                </th>
-              </tr>
-              </thead>
-            </table>
-          </div>
-        </div>
+
+        <AddingRisk handleRisks={handleRisks} addNewRisk={addNewRisk} />
+
         <p>Ya casi, click en PUBLICAR para guardar información del proyecto </p>
+
         <div className="adding-project-final-buttons">
           <button type="button" className="btn-return">REGRESAR</button>
-          {/* <button type="button" onClick={handleSubmit}
-          className="btn-download">Descargar</button> */}
           <button type="submit" className="btn-download">PUBLICAR</button>
         </div>
+
       </form>
     </div>
   );
