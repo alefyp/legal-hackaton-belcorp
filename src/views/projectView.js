@@ -7,7 +7,7 @@ import ProjectsList from '../components/projectList';
 // import { gettingData } from '../API/authentications';
 import UpdateCard from '../components/updateCard';
 import './projectView.css';
-import Lupita from '../Assets/Icons/Lupa.svg';
+// import Lupita from '../Assets/Icons/Lupa.svg';
 import schema from '../API/data/schema';
 
 // import {
