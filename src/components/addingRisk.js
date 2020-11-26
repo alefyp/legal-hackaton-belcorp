@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import AddIcon from '../Assets/Icons/add-icon-black.svg';
-
 // aquí va lo de los riesgos, cada cosita de estaas y al grabar, es un nuevo riesgo
 export default function AddingRisk({ handleRisks, addNewRisk }) {
   const riskTypes = [
