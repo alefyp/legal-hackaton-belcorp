@@ -23,6 +23,10 @@ export default function projectDetails() {
   //= > doc.data()) : console.log('No such document!')))
   //       .catch((error) => console.log('Error getting document:', error));
   //   }, [id]);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+  };
   return (
     <section className="project-details">
       <div className="project-details-container">
@@ -40,7 +44,7 @@ export default function projectDetails() {
           <h6>Cliente</h6>
           <span>{project.owner || 'Maria Cristina Paredes'}</span>
           <h6>Area</h6>
-          <span>{project.area || 'Gerencia Legal' }</span>
+          <span>{project.area || 'Ventas' }</span>
           <h6>Fecha de lanzamiento</h6>
           <span>{project.date || '10/06/2020'}</span>
         </div>
@@ -59,7 +63,7 @@ export default function projectDetails() {
         <Attachments arr={data} />
         <div className="button-box-layout">
           <button type="button" onClick={() => history.goBack()} className="back details-button">REGRESAR</button>
-          <button type="button" className="download details-button">DESCARGAR</button>
+          <button type="button" className="download details-button" onClick={handleClick}>DESCARGAR</button>
 
         </div>
       </div>

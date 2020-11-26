@@ -63,7 +63,7 @@ function App() {
         <NonLoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/">
           <Login />
         </NonLoggedInRoute>
-        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dasboard">
+        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dashboard">
           <Dashboard />
         </LoggedInRoute>
         <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/Agregar">
@@ -72,7 +72,7 @@ function App() {
         <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/Perfil">
           <Dashboard />
         </LoggedInRoute>
-        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dasboard:id">
+        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dashboard/project:id">
           <Dashboard />
         </LoggedInRoute>
       </Switch>

@@ -1,10 +1,10 @@
 export default [
   {
     name: 'Mi Tienda Online',
-    description: 'Mi Tienda Online Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link.',
-
+    description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link.  ',
     startingDate: '15 de enero 2021',
     owner: 'Maria Cristina Paredes',
+    area: 'Ventas',
     recomendations: [
       {
         title: 'Documentos legales',
@@ -180,6 +180,7 @@ export default [
   {
     name: 'Unete 3.0',
     description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link.',
+    area: 'Ventas',
 
     startingDate: '15 de enero 2021',
     owner: 'Maria Cristina Paredes',
@@ -226,14 +227,14 @@ export default [
           {
             title: 'Términos y Condiciones',
             date: '20/07/2020',
-            responsable: 'Alexandra Rojas',
+            responsable: 'Camila Rivera',
             type: 'pdf',
           },
 
           {
             title: 'Política de Cambios y Devoluciones',
             date: '20/07/2020',
-            responsable: 'Alexandra Rojas',
+            responsable: 'Alexa Cortez',
             type: '.pdf',
           },
         ],
@@ -250,13 +251,13 @@ export default [
           {
             title: 'Términos y Condiciones',
             date: '20/07/2020',
-            responsable: 'Alexandra Rojas',
+            responsable: 'Claudia Arenas',
             type: 'pdf',
           },
           {
             title: 'Política de Cambios y Devoluciones',
             date: '20/07/2020',
-            responsable: 'Alexandra Rojas',
+            responsable: 'Sam Hinojosa',
             type: '.pdf',
           },
         ],
@@ -268,6 +269,7 @@ export default [
   {
     name: 'App Gestiona tu negocio',
     description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link.',
+    area: 'Ventas',
 
     startingDate: '15 de enero 2021',
     owner: 'Maria Cristina Paredes',
@@ -314,14 +316,14 @@ export default [
           {
             title: 'Términos y Condiciones',
             date: '20/07/2020',
-            responsable: 'Alexandra Rojas',
+            responsable: 'Alejandro Malaga',
             type: 'pdf',
           },
 
           {
             title: 'Política de Cambios y Devoluciones',
             date: '20/07/2020',
-            responsable: 'Alexandra Rojas',
+            responsable: 'Mayra Zapata',
             type: '.pdf',
           },
         ],
@@ -333,6 +335,7 @@ export default [
   {
     name: 'Beauty seller Plataform',
     description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link.',
+    area: 'Ventas',
 
     startingDate: '15 de enero 2021',
     owner: 'Maria Cristina Paredes',
@@ -370,7 +373,7 @@ export default [
         type: 'Riesgo Tributario',
         level: 'Alto',
         date: '20/07/2020',
-        responsable: '',
+        responsable: 'Manuel Hurtado',
         countries: [
           'Peru',
           'Colombia',
@@ -379,14 +382,14 @@ export default [
           {
             title: 'Términos y Condiciones',
             date: '20/07/2020',
-            responsable: 'Alexandra Rojas',
+            responsable: '',
             type: 'pdf',
           },
 
           {
             title: 'Política de Cambios y Devoluciones',
             date: '20/07/2020',
-            responsable: 'Alexandra Rojas',
+            responsable: 'Paola Medina',
             type: '.pdf',
           },
         ],
