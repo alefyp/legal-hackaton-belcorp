@@ -91,7 +91,6 @@ button[disabled]{
 
 .logo-login{
     grid-area: 1 /1 /2 /2;
-    border-right: 1px solid rgba(128, 128, 128, 0.445);
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
