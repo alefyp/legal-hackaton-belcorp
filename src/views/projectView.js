@@ -7,9 +7,26 @@ import ProjectsList from '../components/projectList';
 // import { gettingData } from '../API/authentications';
 import UpdateCard from '../components/updateCard';
 import './projectView.css';
+// import Lupita from '../Assets/Icons/Lupa.svg';
 import schema from '../API/data/schema';
 
+// import {
+//   // listenAllDocs,
+//   sendCCI,
+// } from '../API/crud';
+// import schema from '../API/data/schema';
+
 export default function ProjectView() {
+  // const [projectsData, setProjectsData] = useState([]);
+  // const [data, setData] = useState([]);
+
+  // useEffect(() => {
+  //   // listenAllDocs(setProjectsData);
+  //   sendCCI(schema);
+  // }, []);
+
+  // const [project, setProject] = useState([]);
+
   const api = schema;
   console.log(api);
   const [grid, setGrid] = useState(true);

@@ -1,0 +1,35 @@
+.riskTab {
+  color: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+}
+.yellow {
+  background-color: #d8d00d;
+}
+.red {
+  background-color: #f22c2c;
+}
+.green {
+  background-color: #34f024;
+}
+.trash-cell img {
+  margin: 0.5rem 0 -0.7rem 0;
+}
+.Country-icon {
+  transition: box-shadow 0.3s;
+  border: none;
+  background-color: #fff;
+  height: 3.5rem;
+  padding: 0.5rem;
+  margin: auto 0;
+  border-radius: 0.5rem;
+}
+.Country-icon:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+.countries-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2rem 3rem;
+}
