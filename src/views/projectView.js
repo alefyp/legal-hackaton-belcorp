@@ -7,7 +7,6 @@ import ProjectsList from '../components/projectList';
 // import { gettingData } from '../API/authentications';
 import UpdateCard from '../components/updateCard';
 import './projectView.css';
-import Lupita from '../Assets/Icons/Lupa.svg';
 import schema from '../API/data/schema';
 
 export default function ProjectView() {
@@ -60,8 +59,7 @@ export default function ProjectView() {
       </section>
       <section className="container-updates">
         <div className="container-header-updates">
-          <h2>Actualizaciones</h2>
-          <button type="button"><img src={Lupita} alt="search-update" /></button>
+          <h2>Actividad reciente</h2>
         </div>
         <UpdateCard />
       </section>

@@ -13,9 +13,13 @@
 }
 
 .container-info-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color:  #c4c4c47c;
-    width: 75%;
+    width: 88%;
     height: 80px;
+    margin: 0 10px;
     border-radius: 8px;
 }
 
@@ -28,11 +32,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    width: 10%;
-    height: 80px;
-    background-color: #c4c4c47c;
+    background: none;
     border: none;
     cursor: pointer;
-    padding: 10px 10px 10px 10px;
+    margin-bottom: 0;
+}
+
+..container-list button img{
+    background-color:#702785;
 }

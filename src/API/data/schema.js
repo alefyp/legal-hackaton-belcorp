@@ -179,7 +179,7 @@ export default [
     ],
     risks: [
       {
-        type: 'Riesgo Tributario',
+        type: 'Riesgo Seguridad de la Información',
         level: 'Alto',
         countries: [
           'Colombia',
@@ -187,7 +187,7 @@ export default [
         ],
       },
       {
-        type: 'Riesgo Publicitario',
+        type: 'Riesgo Ambiental',
         level: 'Medio',
         countries: [
           'Colombia',
