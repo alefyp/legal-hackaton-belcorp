@@ -59,6 +59,50 @@ export default [
 
       },
       {
+        type: 'Riesgo Tributario',
+        level: 'Alto',
+        date: '20/07/2020',
+        // completed: false,
+        responsable: '',
+        countries: [
+          'Brasil',
+        ],
+
+      },
+      {
+        type: 'Riesgo Tributario',
+        level: 'Alto',
+        date: '20/07/2020',
+        // completed: false,
+        responsable: '',
+        countries: [
+          'Brasil',
+        ],
+
+      },
+      {
+        type: 'Riesgo Tributario',
+        level: 'Alto',
+        date: '20/07/2020',
+        // completed: false,
+        responsable: '',
+        countries: [
+          'Chile',
+        ],
+
+      },
+      {
+        type: 'Riesgo Tributario',
+        level: 'Alto',
+        date: '20/07/2020',
+        // completed: false,
+        responsable: '',
+        countries: [
+          'Guatemala',
+        ],
+
+      },
+      {
         type: 'Riesgo Publicitario',
         level: 'Medio',
         date: '20/07/2020',

@@ -11,6 +11,7 @@ import CountriesContainer from './CountriesContainer';
 
 export default function projectDetails() {
   const [filterCountry, setFilterCountry] = useState('');
+  const [data, setData] = useState(project[0].risks);
   //   const { id } = useParams();
   //   const [project, setProject] = useState({});
   //   useEffect(() => {
@@ -47,8 +48,9 @@ export default function projectDetails() {
         <CountriesContainer
           filterCountry={filterCountry}
           setFilterCountry={setFilterCountry}
-          data={project[0].risks} />
-        <Risks arr={project[0].risks} />
+          data={project[0].risks}
+          setData={setData} />
+        <Risks arr={data} filterCountry={filterCountry} />
         <h3 className="subtitleStyle">ARCHIVOS ADJUNTOS</h3>
         <p className="subtitle-description">Descarga, revisa o elimina</p>
 

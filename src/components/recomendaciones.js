@@ -6,7 +6,7 @@ import schema from '../API/data/schema';
 export default function Recomendaciones({ arr }) {
   return (
     <div className="scrolling-Box">
-      {console.log(arr)}
+      {/* {console.log(arr)} */}
       <table className="table-reco ">
         <thead>
           <tr>

@@ -14,7 +14,7 @@ const icons = [{
   name: 'Peru',
   path: PER,
 }, {
-  name: 'Colombia',
+  name: 'Bolivia',
   path: BOL,
 }, {
   name: 'Chile',
@@ -30,17 +30,19 @@ export default function CountriesContainer({
   // eslint-disable-next-line no-unused-vars
   filterCountry, setFilterCountry, data, setData,
 }) {
-  const handleClick = () => {
-    console.log(filterCountry);// BORRA LINEA 30
-    // const newArr = [];
-    // data.forEach(((obj) => {
-    //   obj.countries.forEach((country) => {
-    //     if (country === filterCountry) {
-    //       newArr.push(obj);
-    //     }
-    //   });
-    // }));
-    // setData(newArr);
+  const handleClick = (name) => {
+    // console.log(filterCountry);// BORRA LINEA 30
+    console.log(name);
+    const newArr = [];
+    data.forEach(((obj) => {
+      obj.countries.forEach((country) => {
+        if (country === name) {
+          newArr.push(obj);
+        }
+      });
+    }));
+    console.log(newArr);
+    setData(newArr);
   };
   return (
     <div className="countries-container">
@@ -68,7 +70,7 @@ export default function CountriesContainer({
               onClick={(e) => {
                 e.preventDefault();
                 setFilterCountry(icon.name);
-                handleClick();
+                handleClick(icon.name);
               }}
               key={icon.path}>
               <img src={icon.path} alt={icon.name} />
