@@ -1,22 +1,190 @@
 export default [
   {
     name: 'Mi Tienda Online',
+    description: 'Mi Tienda Online Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link.',
+
+    startingDate: '15 de enero 2021',
+    owner: 'Maria Cristina Paredes',
+    recomendations: [
+      {
+        title: 'Documentos legales',
+        date: '23 de noviembre de 2020',
+        content: 'La plataforma deberá contar con los siguientes documentos legales: Terminos y Condicones, Política de Privacidad,  Autorización de envío de publicidad, Política de Cambios y Devoluciones. Todos los documentos deberán estar ajustados a cada uno de los países involucrados en el lanzamiento.',
+        countries: [
+          'Mexico',
+          'Colombia',
+          'Peru',
+        ],
+
+      },
+      {
+        title: 'Registro',
+        date: '22 de noviembre de 2020',
+        content: 'Se deberá registrar la frase Mi Tienda Online de forma conjunta con el logotipo en los países donde se lanzará la iniciativa.',
+        countries: [
+          'Colombia',
+          'Peru',
+        ],
+      },
+      {
+        title: 'Contratos',
+        date: '22 de noviembre de 2020',
+        content: 'Los contratos de afiliación de las consultoras deberán cumplir con el modelo tributario aplicable a cada país.',
+        countries: [
+          'Mexico',
+          'Colombia',
+          'Peru',
+        ],
+      },
+      {
+        title: 'Promociones',
+        date: '22 de noviembre de 2020',
+        content: ' Todas las promociones de venta (concursos, sorteos o descuentos) deberán cumplir con los requisitos legales publicitarios: vigencia, stock mínimo de unidades, restricciones o condiciones de ser aplicables.',
+        countries: [
+          'Colombia',
+          'Peru',
+        ],
+      },
+    ],
+    risks: [
+      {
+        type: 'Riesgo Financiero',
+        level: 'Alto',
+        date: '20/07/2020',
+        responsable: '',
+        countries: [
+          'Peru',
+          'Colombia',
+        ],
+        attachments: [
+          {
+            title: 'Politica de Privacidad',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+          {
+            title: 'Opinión del asesor externo',
+            date: '20/07/2020',
+            responsable: 'Fiamma de Vinatea',
+            type: '.wrd',
+          },
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+        ],
+      },
+      {
+        type: 'Riesgo Tributario',
+        level: 'Bajo',
+        date: '20/07/2020',
+        responsable: 'Alexandra Rojas',
+        countries: [
+          'Peru',
+        ],
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Michelle Fujii',
+            type: 'pdf',
+          },
+
+        ],
+      },
+
+      {
+        type: 'Riesgo Consumidor',
+        level: 'Medio',
+        date: '20/07/2020',
+        // completed: false,
+        responsable: '',
+        countries: [
+          'Brasil',
+        ],
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: 'pdf',
+          },
+
+        ],
+      },
+      {
+        type: 'Riesgo Consumidor',
+        level: 'Medio',
+        date: '20/07/2020',
+        // completed: false,
+        responsable: 'Michelle Fujii',
+        countries: [
+          'Chile',
+        ],
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: 'pdf',
+          },
+
+        ],
+      },
+      {
+        type: 'Riesgo Consumidor',
+        level: 'Medio',
+        date: '20/07/2020',
+        // completed: false,Fiamma de Vinatea
+        responsable: 'Fiamma de Vinatea',
+        countries: [
+          'Guatemala',
+        ],
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Michelle Fujii',
+            type: 'wrd',
+          },
+
+        ],
+      },
+      {
+        type: 'Riesgo Consumidor',
+        level: 'Bajo',
+        date: '20/07/2020',
+        // completed: false,Fiamma de Vinatea
+        responsable: 'Fiamma de Vinatea',
+        countries: [
+          'Guatemala',
+          'Chile',
+          'Bolivia',
+        ],
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Michelle Fujii',
+            type: 'wrd',
+          },
+
+        ],
+      },
+    ],
+
+  },
+  {
+    name: 'Unete 3.0',
     description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link.',
 
     startingDate: '15 de enero 2021',
     owner: 'Maria Cristina Paredes',
     recomendations: [
-      {
-        title: 'Documentos legales',
-        date: '23 de noviembre de 2020',
-        content: 'La plataforma deberá contar con los siguientes documentos legales: Terminos y Condicones, Política de Privacidad,  Autorización de envío de publicidad, Política de Cambios y Devoluciones. Todos los documentos deberán estar ajustados a cada uno de los países involucrados en el lanzamiento.',
-        countries: [
-          'Mexico',
-          'Colombia',
-          'Peru',
-        ],
 
-      },
       {
         title: 'Registro',
         date: '22 de noviembre de 2020',
@@ -31,8 +199,6 @@ export default [
         date: '22 de noviembre de 2020',
         content: 'Los contratos de afiliación de las consultoras deberán cumplir con el modelo tributario aplicable a cada país.',
         countries: [
-          'Mexico',
-          'Colombia',
           'Peru',
         ],
       },
@@ -51,230 +217,133 @@ export default [
         type: 'Riesgo Tributario',
         level: 'Alto',
         date: '20/07/2020',
-        // completed: false,
+        responsable: '',
+        countries: [
+          'Peru',
+          'Colombia',
+        ],
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: 'pdf',
+          },
+
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+        ],
+      },
+      {
+        type: 'Riesgo Tributario',
+        level: 'Alto',
+        date: '20/07/2020',
         responsable: '',
         countries: [
           'Peru',
         ],
-
-      },
-      {
-        type: 'Riesgo Tributario',
-        level: 'Alto',
-        date: '20/07/2020',
-        // completed: false,
-        responsable: '',
-        countries: [
-          'Brasil',
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: 'pdf',
+          },
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
         ],
-
       },
+
+    ],
+
+  },
+  {
+    name: 'App Gestiona tu negocio',
+    description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link.',
+
+    startingDate: '15 de enero 2021',
+    owner: 'Maria Cristina Paredes',
+    recomendations: [
+
       {
-        type: 'Riesgo Tributario',
-        level: 'Alto',
-        date: '20/07/2020',
-        // completed: false,
-        responsable: '',
+        title: 'Registro',
+        date: '22 de noviembre de 2020',
+        content: 'Se deberá registrar la frase Mi Tienda Online de forma conjunta con el logotipo en los países donde se lanzará la iniciativa.',
         countries: [
-          'Brasil',
+          'Guatemala',
+          'Peru',
         ],
-
       },
       {
-        type: 'Riesgo Tributario',
-        level: 'Alto',
-        date: '20/07/2020',
-        // completed: false,
-        responsable: '',
+        title: 'Contratos',
+        date: '22 de noviembre de 2020',
+        content: 'Los contratos de afiliación de las consultoras deberán cumplir con el modelo tributario aplicable a cada país.',
         countries: [
+          'Gutemala',
+        ],
+      },
+      {
+        title: 'Promociones',
+        date: '22 de noviembre de 2020',
+        content: ' Todas las promociones de venta (concursos, sorteos o descuentos) deberán cumplir con los requisitos legales publicitarios: vigencia, stock mínimo de unidades, restricciones o condiciones de ser aplicables.',
+        countries: [
+          'Bolivia',
           'Chile',
         ],
-
       },
+    ],
+    risks: [
       {
         type: 'Riesgo Tributario',
         level: 'Alto',
         date: '20/07/2020',
-        // completed: false,
-        responsable: '',
-        countries: [
-          'Guatemala',
-        ],
-
-      },
-      {
-        type: 'Riesgo Publicitario',
-        level: 'Medio',
-        date: '20/07/2020',
-        // completed: true,
-        responsable: 'Michelle Rojas',
-        countries: [
-
-          'Colombia',
-        ],
-      },
-      {
-        type: 'Riesgo Publicitario',
-        level: 'Bajo',
-        date: '20/07/2020',
-        // completed: ,
-        responsable: 'Alexandra Rojas',
-        countries: [
-
-          'Peru',
-        ],
-      },
-      {
-        type: 'Riesgo Tributario',
-        level: 'Alto',
-        date: '20/07/2020',
-        // completed: false,
         responsable: '',
         countries: [
           'Peru',
-        ],
-
-      },
-      {
-        type: 'Riesgo Publicitario',
-        level: 'Medio',
-        date: '20/07/2020',
-        // completed: true,
-        responsable: 'Michelle Rojas',
-        countries: [
-
           'Colombia',
         ],
-      },
-      {
-        type: 'Riesgo Publicitario',
-        level: 'Bajo',
-        date: '20/07/2020',
-        // completed: ,
-        responsable: 'Alexandra Rojas',
-        countries: [
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: 'pdf',
+          },
 
-          'Peru',
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
         ],
       },
+
     ],
-    attachments: [
-      {
-        title: 'Términos y Condiciones',
-        date: '20/07/2020',
-        responsable: 'Alexandra Rojas',
-        type: 'pdf',
-      },
-      {
-        title: 'Politica de Privacidad',
-        date: '20/07/2020',
-        responsable: 'Alexandra Rojas',
-        type: '.pdf',
-      },
-      {
-        title: 'Opinión del asesor externo',
-        date: '20/07/2020',
-        responsable: 'Alexandra Rojas',
-        type: '.wrd',
-      },
-      {
-        title: 'Política de Cambios y Devoluciones',
-        date: '20/07/2020',
-        responsable: 'Alexandra Rojas',
-        type: '.pdf',
-      },
-    ],
+
   },
   {
-    name: 'Unete 3.0',
-    description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. ',
+    name: 'Beauty seller Plataform',
+    description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link.',
+
     startingDate: '15 de enero 2021',
     owner: 'Maria Cristina Paredes',
     recomendations: [
-      {
-        title: 'Documentos legales',
-        date: '23 de noviembre de 2020',
-        content: 'La plataforma deberá contar con los siguientes documentos legales: Terminos y Condicones, Política de Privacidad,  Autorización de envío de publicidad, Política de Cambios y Devoluciones. Todos los documentos deberán estar ajustados a cada uno de los países involucrados en el lanzamiento.',
-        countries: [
-          'Brasil',
-          'Colombia',
-          'Peru',
-        ],
 
-      },
       {
         title: 'Registro',
         date: '22 de noviembre de 2020',
         content: 'Se deberá registrar la frase Mi Tienda Online de forma conjunta con el logotipo en los países donde se lanzará la iniciativa.',
         countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-      {
-        title: 'Contratos',
-        date: '22 de noviembre de 2020',
-        content: 'Los contratos de afiliación de las consultoras deberán cumplir con el modelo tributario aplicable a cada país.',
-        countries: [
-          'Brasil',
-          'Colombia',
-          'Peru',
-        ],
-      },
-      {
-        title: 'Promociones',
-        date: '22 de noviembre de 2020',
-        content: ' Todas las promociones de venta (concursos, sorteos o descuentos) deberán cumplir con los requisitos legales publicitarios: vigencia, stock mínimo de unidades, restricciones o condiciones de ser aplicables.',
-        countries: [
-          'Colombia',
-          'Peru',
           'Guatemala',
-        ],
-      },
-    ],
-    risks: [
-      {
-        type: 'Riesgo Tributario',
-        level: 'Alto',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-      {
-        type: 'Riesgo Publicitario',
-        level: 'Medio',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-    ],
-    Attachments: [],
-  },
-  {
-    name: 'App gestiona tu negocio',
-    description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. ',
-    startingDate: '15 de enero 2021',
-    owner: 'Maria Cristina Paredes',
-    recomendations: [
-      {
-        title: 'Documentos legales',
-        date: '23 de noviembre de 2020',
-        content: 'La plataforma deberá contar con los siguientes documentos legales: Terminos y Condicones, Política de Privacidad,  Autorización de envío de publicidad, Política de Cambios y Devoluciones. Todos los documentos deberán estar ajustados a cada uno de los países involucrados en el lanzamiento.',
-        countries: [
-          'Mexico',
-          'Colombia',
-          'Peru',
-        ],
-
-      },
-      {
-        title: 'Registro',
-        date: '22 de noviembre de 2020',
-        content: 'Se deberá registrar la frase Mi Tienda Online de forma conjunta con el logotipo en los países donde se lanzará la iniciativa.',
-        countries: [
-          'Colombia',
           'Peru',
         ],
       },
@@ -283,9 +352,7 @@ export default [
         date: '22 de noviembre de 2020',
         content: 'Los contratos de afiliación de las consultoras deberán cumplir con el modelo tributario aplicable a cada país.',
         countries: [
-          'Mexico',
-          'Colombia',
-          'Peru',
+          'Gutemala',
         ],
       },
       {
@@ -293,8 +360,8 @@ export default [
         date: '22 de noviembre de 2020',
         content: ' Todas las promociones de venta (concursos, sorteos o descuentos) deberán cumplir con los requisitos legales publicitarios: vigencia, stock mínimo de unidades, restricciones o condiciones de ser aplicables.',
         countries: [
-          'Colombia',
-          'Peru',
+          'Bolivia',
+          'Chile',
         ],
       },
     ],
@@ -302,219 +369,31 @@ export default [
       {
         type: 'Riesgo Tributario',
         level: 'Alto',
+        date: '20/07/2020',
+        responsable: '',
         countries: [
-          'Colombia',
           'Peru',
-        ],
-      },
-      {
-        type: 'Riesgo Publicitario',
-        level: 'Medio',
-        countries: [
           'Colombia',
-          'Peru',
         ],
-      },
-    ],
-    Attachments: [],
-  },
-  {
-    name: 'Beauty seller plataform',
-    description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. ',
-    startingDate: '15 de enero 2021',
-    owner: 'Maria Cristina Paredes',
-    recomendations: [
-      {
-        title: 'Documentos legales',
-        date: '23 de noviembre de 2020',
-        content: 'La plataforma deberá contar con los siguientes documentos legales: Terminos y Condicones, Política de Privacidad,  Autorización de envío de publicidad, Política de Cambios y Devoluciones. Todos los documentos deberán estar ajustados a cada uno de los países involucrados en el lanzamiento.',
-        countries: [
-          'Mexico',
-          'Colombia',
-          'Peru',
-        ],
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: 'pdf',
+          },
 
-      },
-      {
-        title: 'Registro',
-        date: '22 de noviembre de 2020',
-        content: 'Se deberá registrar la frase Mi Tienda Online de forma conjunta con el logotipo en los países donde se lanzará la iniciativa.',
-        countries: [
-          'Colombia',
-          'Peru',
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
         ],
       },
-      {
-        title: 'Contratos',
-        date: '22 de noviembre de 2020',
-        content: 'Los contratos de afiliación de las consultoras deberán cumplir con el modelo tributario aplicable a cada país.',
-        countries: [
-          'Mexico',
-          'Colombia',
-          'Peru',
-        ],
-      },
-      {
-        title: 'Promociones',
-        date: '22 de noviembre de 2020',
-        content: ' Todas las promociones de venta (concursos, sorteos o descuentos) deberán cumplir con los requisitos legales publicitarios: vigencia, stock mínimo de unidades, restricciones o condiciones de ser aplicables.',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-    ],
-    risks: [
-      {
-        type: 'Riesgo Tributario',
-        level: 'Alto',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-      {
-        type: 'Riesgo Publicitario',
-        level: 'Medio',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-    ],
-    Attachments: [],
-  },
-  {
-    name: 'Tienda',
-    description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. ',
-    startingDate: '15 de enero 2021',
-    owner: 'Maria Cristina Paredes',
-    recomendations: [
-      {
-        title: 'Documentos legales',
-        date: '23 de noviembre de 2020',
-        content: 'La plataforma deberá contar con los siguientes documentos legales: Terminos y Condicones, Política de Privacidad,  Autorización de envío de publicidad, Política de Cambios y Devoluciones. Todos los documentos deberán estar ajustados a cada uno de los países involucrados en el lanzamiento.',
-        countries: [
-          'Mexico',
-          'Colombia',
-          'Peru',
-        ],
 
-      },
-      {
-        title: 'Registro',
-        date: '22 de noviembre de 2020',
-        content: 'Se deberá registrar la frase Mi Tienda Online de forma conjunta con el logotipo en los países donde se lanzará la iniciativa.',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-      {
-        title: 'Contratos',
-        date: '22 de noviembre de 2020',
-        content: 'Los contratos de afiliación de las consultoras deberán cumplir con el modelo tributario aplicable a cada país.',
-        countries: [
-          'Mexico',
-          'Colombia',
-          'Peru',
-        ],
-      },
-      {
-        title: 'Promociones',
-        date: '22 de noviembre de 2020',
-        content: ' Todas las promociones de venta (concursos, sorteos o descuentos) deberán cumplir con los requisitos legales publicitarios: vigencia, stock mínimo de unidades, restricciones o condiciones de ser aplicables.',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
     ],
-    risks: [
-      {
-        type: 'Riesgo Tributario',
-        level: 'Alto',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-      {
-        type: 'Riesgo Publicitario',
-        level: 'Medio',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-    ],
-    Attachments: [],
-  },
-  {
-    name: 'update 3.0',
-    description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. ',
-    startingDate: '15 de enero 2021',
-    owner: 'Maria Cristina Paredes',
-    recomendations: [
-      {
-        title: 'Documentos legales',
-        date: '23 de noviembre de 2020',
-        content: 'La plataforma deberá contar con los siguientes documentos legales: Terminos y Condicones, Política de Privacidad,  Autorización de envío de publicidad, Política de Cambios y Devoluciones. Todos los documentos deberán estar ajustados a cada uno de los países involucrados en el lanzamiento.',
-        countries: [
-          'Mexico',
-          'Colombia',
-          'Peru',
-        ],
 
-      },
-      {
-        title: 'Registro',
-        date: '22 de noviembre de 2020',
-        content: 'Se deberá registrar la frase Mi Tienda Online de forma conjunta con el logotipo en los países donde se lanzará la iniciativa.',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-      {
-        title: 'Contratos',
-        date: '22 de noviembre de 2020',
-        content: 'Los contratos de afiliación de las consultoras deberán cumplir con el modelo tributario aplicable a cada país.',
-        countries: [
-          'Mexico',
-          'Colombia',
-          'Peru',
-        ],
-      },
-      {
-        title: 'Promociones',
-        date: '22 de noviembre de 2020',
-        content: ' Todas las promociones de venta (concursos, sorteos o descuentos) deberán cumplir con los requisitos legales publicitarios: vigencia, stock mínimo de unidades, restricciones o condiciones de ser aplicables.',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-    ],
-    risks: [
-      {
-        type: 'Riesgo Seguridad de la Información',
-        level: 'Alto',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-      {
-        type: 'Riesgo Ambiental',
-        level: 'Medio',
-        countries: [
-          'Colombia',
-          'Peru',
-        ],
-      },
-    ],
-    Attachments: [],
   },
 ];
 // riskLevel: ['Alto', 'medio', 'bajo']
@@ -529,3 +408,262 @@ export default [
 //         'Riesgo Seguridad de la Información',
 //         'Riesgo de Libre Competencia'
 //         ]
+
+/**
+ *
+ *   {
+        type: 'Riesgo Tributario',
+        level: 'Alto',
+        date: '20/07/2020',
+        // completed: false,
+        responsable: '',
+        countries: [
+          'Brasil',
+        ],
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: 'pdf',
+          },
+
+        ],
+      },
+      {
+        type: 'Riesgo Tributario',
+        level: 'Alto',
+        date: '20/07/2020',
+        responsable: '',
+        countries: [
+          'Brasil',
+        ],
+        attachments: [
+
+          {
+            title: 'Politica de Privacidad',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+        ],
+
+      },
+      {
+        type: 'Riesgo Tributario',
+        level: 'Alto',
+        date: '20/07/2020',
+        responsable: '',
+        countries: [
+          'Chile',
+        ],
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: 'pdf',
+          },
+          {
+            title: 'Politica de Privacidad',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+        ],
+      },
+      {
+        type: 'Riesgo Tributario',
+        level: 'Alto',
+        date: '20/07/2020',
+        responsable: '',
+        countries: [
+          'Guatemala',
+        ],
+        attachments: [
+
+          {
+            title: 'Politica de Privacidad',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+          {
+            title: 'Opinión del asesor externo',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.wrd',
+          },
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+        ],
+
+      },
+      {
+        type: 'Riesgo Publicitario',
+        level: 'Medio',
+        date: '20/07/2020',
+        // completed: true,
+        responsable: 'Michelle Rojas',
+        countries: [
+
+          'Colombia',
+        ],
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: 'pdf',
+          },
+          {
+            title: 'Politica de Privacidad',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+          {
+            title: 'Opinión del asesor externo',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.wrd',
+          },
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+        ],
+      },
+      {
+        type: 'Riesgo Publicitario',
+        level: 'Bajo',
+        date: '20/07/2020',
+        // completed: ,
+        responsable: 'Alexandra Rojas',
+        countries: [
+
+          'Peru',
+        ],
+        attachments: [
+
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+        ],
+      },
+      {
+        type: 'Riesgo Tributario',
+        level: 'Alto',
+        date: '20/07/2020',
+        responsable: '',
+        countries: [
+          'Peru',
+        ],
+        attachments: [
+
+          {
+            title: 'Opinión del asesor externo',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.wrd',
+          },
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+        ],
+      },
+      {
+        type: 'Riesgo Publicitario',
+        level: 'Medio',
+        date: '20/07/2020',
+        // completed: true,
+        responsable: 'Michelle Rojas',
+        countries: [
+
+          'Colombia',
+        ],
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: 'pdf',
+          },
+
+          {
+            title: 'Opinión del asesor externo',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.wrd',
+          },
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+        ],
+      },
+      {
+        type: 'Riesgo Publicitario',
+        level: 'Bajo',
+        date: '20/07/2020',
+        // completed: ,
+        responsable: 'Alexandra Rojas',
+        countries: [
+
+          'Peru',
+        ],
+        attachments: [
+          {
+            title: 'Términos y Condiciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: 'pdf',
+          },
+          {
+            title: 'Politica de Privacidad',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+          {
+            title: 'Opinión del asesor externo',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.wrd',
+          },
+          {
+            title: 'Política de Cambios y Devoluciones',
+            date: '20/07/2020',
+            responsable: 'Alexandra Rojas',
+            type: '.pdf',
+          },
+        ],
+      },
+ */

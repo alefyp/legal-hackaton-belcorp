@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import { useParams } from 'react-router-dom';
 // import { getADocument } from '../API/crud';
+import { useHistory } from 'react-router-dom';
 import './projectDetails.css';
 import Recomendaciones from './recomendaciones';
 import project from '../API/data/schema';
@@ -12,6 +13,7 @@ import CountriesContainer from './CountriesContainer';
 export default function projectDetails() {
   const [filterCountry, setFilterCountry] = useState('');
   const [data, setData] = useState(project[0].risks);
+  const history = useHistory();
   //   const { id } = useParams();
   //   const [project, setProject] = useState({});
   //   useEffect(() => {
@@ -54,9 +56,9 @@ export default function projectDetails() {
         <h3 className="subtitleStyle">ARCHIVOS ADJUNTOS</h3>
         <p className="subtitle-description">Descarga, revisa o elimina</p>
 
-        <Attachments arr={project[0].attachments} />
+        <Attachments arr={data} />
         <div className="button-box-layout">
-          <button type="button" className="back details-button">REGRESAR</button>
+          <button type="button" onClick={() => history.goBack()} className="back details-button">REGRESAR</button>
           <button type="button" className="download details-button">DESCARGAR</button>
 
         </div>

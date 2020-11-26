@@ -11,7 +11,7 @@ import Agregar from '../Assets/Icons/Agregar.svg';
 import Perfil from '../Assets/Icons/Perfil.svg';
 import Salir from '../Assets/Icons/Salir.svg';
 import ProjectDetails from './projectDetails';
-import ProjectView from '../views/projectView';
+// import ProjectView from '../views/projectView';
 import AddingProject from '../views/addingProject';
 import { signOut } from '../API/authentications';
 
@@ -53,7 +53,7 @@ export default function NavBar(viewComponent, setViewComponent) {
       </nav>
       <Switch>
         <Route exact path="/dashboard">
-          <ProjectView />
+          {/* <ProjectView /> */}
         </Route>
         <Route path="/Agregar">
           <AddingProject />
