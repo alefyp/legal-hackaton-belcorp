@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import Login from './views/login';
 import Dashboard from './views/dashboard';
-import auth from './firebaseInit';
+import { auth } from './firebaseInit';
 
 function LoggedInRoute({ children, isUserLoggedIn, ...rest }) {
   return (
