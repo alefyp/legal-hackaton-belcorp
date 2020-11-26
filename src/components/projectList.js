@@ -10,7 +10,7 @@ export default function ProjectCards({ project }) {
       <div className="container-img-list"><img src={Store} alt="icono" /></div>
       <div className="container-info-list">
         <h3>{project.name}</h3>
-        <h4>{project.startingDate}</h4>
+        <h4>25 Enero 2021</h4>
       </div>
       <button type="button" className="btn-verMas">
         <img src={Lupita} alt="search-update" />

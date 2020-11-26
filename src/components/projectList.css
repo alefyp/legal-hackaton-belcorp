@@ -1,13 +1,11 @@
 .container-list{
     display: flex;
-    align-items:center;
     justify-content: space-between;
     width: 100%;
 }
 .container-img-list{
     display: flex;
     justify-content: center;
-    align-self: center;
     background-color: #c4c4c47c;
     width: 10%;
     height: 80px;
