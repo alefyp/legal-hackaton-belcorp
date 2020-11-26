@@ -556,18 +556,6 @@ export default [
           },
         ],
       },
-<<<<<<< HEAD
-    ],
-    Attachments: [],
-  },
-  {
-    name: 'Update 2.0',
-    description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. ',
-    startingDate: '15 de enero 2021',
-    owner: 'Maria Cristina Paredes',
-    recomendations: [
-=======
->>>>>>> e2b74192d0fcba49a704135d61930d82ccc92363
       {
         type: 'Riesgo Publicitario',
         level: 'Bajo',
