@@ -9,6 +9,7 @@
     padding: 0 50px;
 }
 .upperBar h1 {
+    color: #91A1BE;
     margin: 0;
     padding: 0;
     font-size: 3em;
@@ -26,4 +27,11 @@
     margin: 0;
     padding: 0;
     margin-left: 20px;
+}
+
+.upperBar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    border:1px solid rgba(131, 131, 131, 0.829);
 }

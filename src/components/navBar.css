@@ -1,11 +1,11 @@
 .navBar {
-  background-color: #605151;
+  background-color: #702785;
   margin: 0;
   padding: 0;
   grid-area: 1 / 1 / 6 / 2;
 }
 .navBar ul {
-  background-color: #605151;
+  background-color: #702785;
   position: fixed;
   height: 100vh;
   margin: 0;
