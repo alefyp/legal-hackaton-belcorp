@@ -7,9 +7,9 @@ import './addingProject.css';
 export default function addingProject() {
   const db = firebase.firestore();
   console.log(db);
-
+  // Project data queda como el objeto final de nuevo proyecto
   const [projectData, setProjectData] = useState({});
-  // Este va a ser el array con todos los riesgos
+  // Project risk es para la sección de riesgos
   const [projectRisks, setProjectRisks] = useState([]);
   // handlers form
   const handleSubmit = (event) => {
@@ -84,14 +84,6 @@ export default function addingProject() {
               className="project-start-date" />
           </label>
         </div>
-
-        <label htmlFor="project-recomendation">
-          RECOMENDACIÓN
-          <textarea
-            onChange={(e) => { handleChanges(e, 'recomendation'); }}
-            placeholder="Escribe la recomendación inicial para este proyecto"
-            className="project-recomendation" />
-        </label>
 
         <AddingRisk handleRisks={handleRisks} addNewRisk={addNewRisk} />
 

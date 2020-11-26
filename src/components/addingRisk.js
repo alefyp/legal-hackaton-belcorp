@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import Agregar from '../Assets/Icons/add-icon-black.svg';
+import Thrash from '../Assets/Icons/trash.svg';
 import './addingRisk.css';
 // aquí va lo de los riesgos, cada cosita de estaas y al grabar, es un nuevo riesgo
 export default function AddingRisk({ handleRisks, addNewRisk }) {
+  // const riskTableResult = [];
   const riskTypes = [
     'Riesgo Laboral',
     'Riesgo Reputacional',
@@ -16,7 +19,8 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
     'Riesgo de Libre Competencia'];
 
   const riskLevel = ['Riesgo Alto', 'Riesgo Medio', 'Riesgo Bajo'];
-
+  // const [riskTableRows, setriskTableRows] = useState([]);
+  // AQUÍ HAGO MI ROW, VAMOS A VER SI NO TERMINO LLORANDO AAAAAAAAAAAH
   return (
     <div className="adding-project-new-risk">
       <p>
@@ -49,7 +53,7 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
               <th>Fecha</th>
               <th>Se asumió el riesgo</th>
               <th>Responsable</th>
-              <th>&nbsp</th>
+              <th> </th>
             </tr>
           </thead>
           <tbody>
@@ -107,16 +111,42 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
               </td>
 
               <td>
-                eli
+                <button type="button" className="add-risk-delete-button">
+                  <img src={Thrash} alt="delete" />
+                </button>
               </td>
-
             </tr>
           </tbody>
         </table>
+        <button type="button" className="new-line-add-risk">
+          <img className="add-risk-add-new" src={Agregar} alt="add-new" />
+          AGREGAR NUEVA LÍNEA
+        </button>
       </div>
 
       <p className="adding-risk-aux_text">3 de 3 Adjuntar Documentos</p>
-      <input type="file" />
+      <div className="adding-risk-attachments">
+        <table>
+          <thead>
+            <tr>
+              <th>Documento</th>
+              <th>Fecha</th>
+              <th>Agregado por</th>
+              <th>Tipo</th>
+              <th>Opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <input type="file" />
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" className="new-line-add-risk">
+          <img className="add-risk-add-new" src={Agregar} alt="add-new" />
+          AGREGAR NUEVO DOCUMENTO
+        </button>
+      </div>
       <div className="adding-risk-grabar-section">
         <p>
           Los documentos y riesgos pueden variar de país en país,

@@ -31,7 +31,7 @@ function NonLoggedInRoute({ children, isUserLoggedIn, ...rest }) {
         if (!isUserLoggedIn) {
           return <>{children}</>;
         }
-        return <Redirect to="/dasboard" />;
+        return <Redirect to="/dashboard" />;
       }}
     />
   );
@@ -63,7 +63,7 @@ function App() {
         <NonLoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/">
           <Login />
         </NonLoggedInRoute>
-        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dasboard">
+        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dashboard">
           <Dashboard />
         </LoggedInRoute>
         <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/Agregar">
