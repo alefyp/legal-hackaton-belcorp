@@ -32,7 +32,7 @@ export default function CountriesContainer({
 }) {
   const handleClick = (name) => {
     // console.log(filterCountry);// BORRA LINEA 30
-    console.log(name);
+    // console.log(name);
     const newArr = [];
     data.forEach(((obj) => {
       obj.countries.forEach((country) => {
@@ -41,7 +41,7 @@ export default function CountriesContainer({
         }
       });
     }));
-    console.log(newArr);
+    // console.log(newArr);
     setData(newArr);
   };
   return (

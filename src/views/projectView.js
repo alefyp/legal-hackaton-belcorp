@@ -1,6 +1,6 @@
 // eslint-disable-next-line max-len
 // import React, { useEffect, useState } from 'react';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Filters from '../components/filters';
 import ProjectCards from '../components/projectCards';
 import ProjectsList from '../components/projectList';
@@ -8,47 +8,35 @@ import ProjectsList from '../components/projectList';
 import UpdateCard from '../components/updateCard';
 import './projectView.css';
 // import Lupita from '../Assets/Icons/Lupa.svg';
-import schema from '../API/data/schema';
-
-// import {
-//   // listenAllDocs,
-//   sendCCI,
-// } from '../API/crud';
 // import schema from '../API/data/schema';
 
+import {
+  listenAllDocs,
+} from '../API/crud';
+
 export default function ProjectView() {
-  // const [projectsData, setProjectsData] = useState([]);
-  // const [data, setData] = useState([]);
+  const [project, setProject] = useState([]);
 
-  // useEffect(() => {
-  //   // listenAllDocs(setProjectsData);
-  //   sendCCI(schema);
-  // }, []);
+  useEffect(() => {
+    listenAllDocs(setProject, 'projectos');
+  }, []);
 
-  // const [project, setProject] = useState([]);
-
-  const api = schema;
+  // const api = schema;
+  // console.log(api);
   const [grid, setGrid] = useState(true);
   const [list, setList] = useState(false);
-  const [project, setProject] = useState([]);
   const [search, setSearch] = useState('');
   const [level, setLevel] = useState('');
   const [kind, setKind] = useState('');
   const [sort, setSort] = useState('');
 
-  /*   useEffect(() => {
-    gettingData('projects').then((doc) => {
-      const proyectos = doc.docs.map((algo) => ({ id: algo.id, ...algo.data() }));
-      setProject(proyectos);
-    });
-  }, []); */
   return (
     <div className="container-sections">
       <section className="container-projects">
         <div className="header-projects">
           <h2>Proyectos</h2>
           <Filters
-            Api={api}
+            Api={project}
             setGrid={setGrid}
             setList={setList}
             search={search}
