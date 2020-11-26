@@ -28,3 +28,10 @@ export async function gettingData(collection) {
     return error.message;
   }
 }
+
+export const searchData = (data, inputSearch) => {
+  const lowerName = inputSearch.toLowerCase();
+  const capitalUpperName = lowerName.charAt(0).toUpperCase() + lowerName.slice(1);
+  const info = data.filter((proj) => proj.name.startsWith(capitalUpperName));
+  return info;
+};
