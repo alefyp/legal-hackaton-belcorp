@@ -7,7 +7,9 @@ import './addingProject.css';
 export default function addingProject() {
   const db = firebase.firestore();
   console.log(db);
+
   const [projectData, setProjectData] = useState({});
+  // Este va a ser el array con todos los riesgos
   const [projectRisks, setProjectRisks] = useState([]);
   // handlers form
   const handleSubmit = (event) => {
@@ -20,18 +22,23 @@ export default function addingProject() {
     setProjectData({ ...projectData, risks: projectRisks });
   };
 
-  const handleRisks = (e) => {
-    console.log(projectRisks, e);
-    projectRisks.push(e);
-    setProjectRisks(projectRisks);
+  const handleRisks = (e, key) => {
+    console.log(e.target.value, projectRisks, key);
+    // riskTemp[key] = e;
+    // projectRisks.push(riskTemp);
+    setProjectRisks({ ...projectRisks });
+  };
+
+  const addNewRisk = () => {
+    console.log('Añadiendo un nuevo riesgo...');
   };
 
   return (
     <div className="container-adding-project">
-      <h1>Nuevo Proyecto</h1>
-      <form onSubmit={handleSubmit}>
+      <h2>NUEVO PROYECTO</h2>
+      <form onSubmit={handleSubmit} className="adding-project-form">
         <label htmlFor="project-name">
-          Nombre:
+          NOMBRE
           <input
             type="text"
             placeholder="Ingresa nombre del proyecto"
@@ -40,67 +47,71 @@ export default function addingProject() {
           />
         </label>
         <label htmlFor="project-description">
-          Descripción:
+          DESCRIPCIÓN
           <textarea
             onChange={(e) => { handleChanges(e, 'description'); }}
+            placeholder="Cuéntanos más acerca del proyecto"
             className="project-description" />
         </label>
-        <label htmlFor="project-client-name">
-          Cliente:
-          <input
-            onChange={(e) => { handleChanges(e, 'clientname'); }}
-            placeholder="¿Quién hizo la solicitud?"
-            type="text"
-            className="project-client-name" />
+        <div className="adding-project-client_area_date-section">
+          <label htmlFor="project-client-name">
+            CLIENTE
+            <input
+              onChange={(e) => { handleChanges(e, 'clientname'); }}
+              placeholder="¿Quién hizo la solicitud?"
+              type="text"
+              className="project-client-name" />
+          </label>
+          <label htmlFor="project-area">
+            ÁREA
+            <input
+              onChange={(e) => { handleChanges(e, 'area'); }}
+              placeholder="¿A que área pertenece?"
+              type="text"
+              className="project-area" />
+          </label>
+          <label htmlFor="project-start-date">
+            FECHA DE LANZAMIENTO
+            <input
+              onChange={(e) => { handleChanges(e, 'startdate'); }}
+              type="date"
+              className="project-start-date" />
+          </label>
+        </div>
+        <label htmlFor="project-recomendation">
+          RECOMENDACIÓN
+          <textarea
+            onChange={(e) => { handleChanges(e, 'recomendation'); }}
+            placeholder="Escribe la recomendación inicial para este proyecto"
+            className="project-recomendation" />
         </label>
-        <label htmlFor="project-start-date">
-          Fecha de Lanzamiento:
-          <input
-            onChange={(e) => { handleChanges(e, 'startdate'); }}
-            type="date"
-            className="project-start-date" />
-        </label>
-
-        <h2> En esta sección, puedes registrar, clasificar riesgo  y adjuntar documentos.</h2>
-        <div>
-          <h3>Paises involucrados</h3>
-          <select onChange={(e) => { handleChanges(e, 'countries'); }}>
-            <option hidden value="">Selecciona un país</option>
-            <option value="Peru">Perú</option>
-            <option value="Colombia">Colombia</option>
-            <option value="Chile">Chile</option>
-            <option value="Brazil">Brazil</option>
-          </select>
+        <div className="adding-project-new-risk">
+          <p>
+            En esta sección recuerda que puedes registrar, clasificar riesgos y
+            adjuntar documentos por país
+          </p>
+          <AddingRisk handleRisks={handleRisks} addNewRisk={addNewRisk} />
+          <div className="adding-project-risks-table">
+            <table>
+              <tr>
+                <th>
+                  Documento
+                  Fecha
+                  Agregado por
+                  Tipo
+                  Opciones
+                </th>
+              </tr>
+            </table>
+          </div>
         </div>
-        <div className="risk-table">
-          <table>
-            <tr>
-              <th>Tipo de riesgo</th>
-              <th>Nivel de riesgo</th>
-              <th>Fecha</th>
-              <th>Se asumió el riesgo</th>
-              <th>Responsable</th>
-            </tr>
-          </table>
-          <AddingRisk handleRisks={handleRisks} />
+        <p>Ya casi, click en PUBLICAR para guardar información del proyecto </p>
+        <div className="adding-project-final-buttons">
+          <button type="button" className="btn-return">REGRESAR</button>
+          {/* <button type="button" onClick={handleSubmit}
+          className="btn-download">Descargar</button> */}
+          <button type="submit" className="btn-download">PUBLICAR</button>
         </div>
-        <div className="attach-doc">
-          <table>
-            <tr>
-              <th>
-                Documento
-                Fecha
-                Agregado por
-                Tipo
-                Opciones
-              </th>
-            </tr>
-          </table>
-        </div>
-        <button type="button" className="btn-return">Regresar</button>
-        {/* <button type="button" onClick={handleSubmit}
-        className="btn-download">Descargar</button> */}
-        <button type="submit" className="btn-download">Publicar</button>
       </form>
     </div>
   );
