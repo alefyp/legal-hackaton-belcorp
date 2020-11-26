@@ -32,3 +32,15 @@
     /* no cambies este 30% */
     width: 30%; 
 }
+
+.container-header-updates{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-header-updates button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin:0 10px 0 10px;  
+}

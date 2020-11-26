@@ -1,0 +1,90 @@
+.container-adding-project{
+    grid-area: 2 /2 /13/13;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 100px;
+    overflow: auto;
+    font-size: 18px;
+}
+
+.container-adding-project h2:first-child{
+    font-size: 24px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: -50px;
+}
+
+.adding-project-client_area_date-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.adding-project-form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.adding-project-form label{
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.adding-project-form input{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.adding-project-form input, .adding-project-form textarea{
+    padding: 16px 32px;
+    border-radius: 5px;
+    background: #FAFAFA;
+    border: 1.5px solid #E8E8E8;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 5px;
+}
+
+.adding-project-form label[for=project-description], .adding-project-form label[for=project-recomendation]{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    
+}
+
+.adding-project-form textarea{
+    height:350px;
+}
+
+.adding-project-form label, .adding-project-form input{
+    font-size: 18px;
+    
+}
+.adding-project-form label[for=project-name] input{
+    width: 350px;
+    
+}
+
+
+.adding-project-form select{
+    padding: 16px 32px;
+    border-radius: 5px;
+    background: #FAFAFA;
+    border: 1.5px solid #E8E8E8;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
