@@ -93,6 +93,7 @@ export default function addingProject() {
           <AddingRisk handleRisks={handleRisks} addNewRisk={addNewRisk} />
           <div className="adding-project-risks-table">
             <table>
+            <thead>
               <tr>
                 <th>
                   Documento
@@ -102,6 +103,7 @@ export default function addingProject() {
                   Opciones
                 </th>
               </tr>
+              </thead>
             </table>
           </div>
         </div>
