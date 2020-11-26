@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import { useParams } from 'react-router-dom';
 // import { getADocument } from '../API/crud';
+import { useHistory } from 'react-router-dom';
 import './projectDetails.css';
 import Recomendaciones from './recomendaciones';
 import project from '../API/data/schema';
@@ -12,6 +13,7 @@ import CountriesContainer from './CountriesContainer';
 export default function projectDetails() {
   const [filterCountry, setFilterCountry] = useState('');
   const [data, setData] = useState(project[0].risks);
+  const history = useHistory();
   //   const { id } = useParams();
   //   const [project, setProject] = useState({});
   //   useEffect(() => {
@@ -21,6 +23,10 @@ export default function projectDetails() {
   //= > doc.data()) : console.log('No such document!')))
   //       .catch((error) => console.log('Error getting document:', error));
   //   }, [id]);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+  };
   return (
     <section className="project-details">
       <div className="project-details-container">
@@ -38,7 +44,7 @@ export default function projectDetails() {
           <h6>Cliente</h6>
           <span>{project.owner || 'Maria Cristina Paredes'}</span>
           <h6>Area</h6>
-          <span>{project.area || 'Gerencia Legal' }</span>
+          <span>{project.area || 'Ventas' }</span>
           <h6>Fecha de lanzamiento</h6>
           <span>{project.date || '10/06/2020'}</span>
         </div>
@@ -54,10 +60,10 @@ export default function projectDetails() {
         <h3 className="subtitleStyle">ARCHIVOS ADJUNTOS</h3>
         <p className="subtitle-description">Descarga, revisa o elimina</p>
 
-        <Attachments arr={project[0].attachments} />
+        <Attachments arr={data} />
         <div className="button-box-layout">
-          <button type="button" className="back details-button">REGRESAR</button>
-          <button type="button" className="download details-button">DESCARGAR</button>
+          <button type="button" onClick={() => history.goBack()} className="back details-button">REGRESAR</button>
+          <button type="button" className="download details-button" onClick={handleClick}>DESCARGAR</button>
 
         </div>
       </div>
