@@ -37,10 +37,11 @@ const listenAllDocs = (callback, dataset) => {
       callback(dataArr);
     });
 };
-const getADocument = (docID, collectionName) => {
-  const docRef = firebase.firestore().collection(collectionName).doc(docID);
-  return docRef.get();
-};
+const getADocument = (docID, collectionName) => firebase
+  .firestore()
+  .collection(collectionName).doc(docID)
+  .onSnapshot((doc) => console.log(doc.data()));
+
 export {
   sendCCI,
   listenAllDocs,

@@ -29,7 +29,7 @@ export default function Attachments({ arr }) {
               ? (newArr.map((element, i) => (
                 // eslint-disable-next-line react/no-array-index-key
                 <tr className="table-lines" key={`${i}${element.title}`}>
-                  {console.log(element)}
+                  {/* {console.log(element)} */}
                   <td>{element.title}</td>
                   <td>{element.date}</td>
                   <td>{element.responsable || 'Michelle Rojas'}</td>

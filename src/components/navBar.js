@@ -58,7 +58,7 @@ export default function NavBar(viewComponent, setViewComponent) {
         <Route path="/Agregar">
           <AddingProject />
         </Route>
-        <Route path="/dashboard/projects:id">
+        <Route path="/dashboard/project:id">
           <ProjectDetails />
         </Route>
         {/* <Route path="/Salir">
