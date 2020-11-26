@@ -5,7 +5,7 @@ import { auth } from '../firebaseInit';
 import { signIn } from '../API/authentications';
 // icons
 import Logo from '../Assets/Icons/logos Belcorp_Belcorp Color 1.svg';
-import Background from '../Assets/background-belcorp.jpeg';
+import Background from '../Assets/final-background.jpeg';
 import './login.css';
 
 export default function Login() {
