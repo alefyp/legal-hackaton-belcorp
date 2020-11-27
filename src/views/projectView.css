@@ -2,6 +2,9 @@
     grid-area: 2 / 2 / 13 / 13;
     display: flex;
     overflow: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 .container-projects h2{
@@ -13,6 +16,7 @@
     /* no cambies este 70% */
     width: 70%;
     padding: 35px;
+    overflow: auto;
 }
 
 /* .header-projects{
@@ -22,8 +26,9 @@
 .container-updates{
     /* no cambies este 30% */
     width: 30%;
+    height: 100%;
     overflow: auto;
-    height: 75vh;
+    /* height: 75vh; */
 }
 
 .container-header-updates{
@@ -44,10 +49,10 @@
 }
 
 .scrolling-Box {
-    overflow-x: auto;
     color: #786565;
     font-size: 1rem;
-    height: 75vh;
+    overflow: auto;
+    height: 100%;
     margin: 10px 0;
     padding: 0.5rem 1rem;
     display: flex;
