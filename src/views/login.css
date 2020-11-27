@@ -2,38 +2,52 @@
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     font-size: 20px;
 }
 
+.background-image{
+    grid-area: 1 / 1 / 2 / 3; 
+    opacity: 0.6;
+    z-index: -10;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
 .login-form{
-    grid-area: 3 / 7 / 10 / 11; 
+    grid-area: 1 / 2 / 2 / 3; 
     display: flex;
     flex-direction: column;
-    padding: 0 10%;
-    margin-right: 10%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .login-form h1{
-    font-size: 2.5em;
+    font-size: 4.5em;
     margin: 0px;
-    color: #91a1be;
+    color: #702785;
+    align-self: flex-start;
 }
 
 .login-form h2{
     margin: 5px 0;
+    align-self: flex-start;
 }
 
 .login-form button{
     background-color: #91A1BE;
-    width: 60%;
+    width: 350px;
     align-self: center;
     margin-top: 10px;
     background: #91A1BE;
-    color: white;
+    color: rgb(0, 0, 0);
     border: 1px solid #91A1BE;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -51,10 +65,11 @@ button[disabled]{
     display: flex;
     flex-direction: column;
     padding: 5px 0;
+    width: 100%;
 }
 
 .login-form input{
-    
+    width: 100%;
     margin-top: 5px;
     border-radius: 5px;
     padding: 16px 32px;
@@ -74,28 +89,14 @@ button[disabled]{
     align-self: center;
 }
 
-.social-media-bar{
-    background-color: #605151;
-    grid-area: 12 / 1 / 13 / 13;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-content: center;
-    align-items: center;
-    padding-right: 50px;
-}
-
-.social-media-bar a{
-    padding: 0 25px;
-}
-
 .logo-login{
-    grid-area: 3 / 3 / 10 / 7;
-    border-right: 1px solid rgba(128, 128, 128, 0.445);
+    grid-area: 1 /1 /2 /2;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .logo-login img{
-    width: 80%;
+    width: 30%;
+    padding: 40px;
 }

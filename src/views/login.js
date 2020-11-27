@@ -4,13 +4,8 @@ import firebase from 'firebase/app';
 import { auth } from '../firebaseInit';
 import { signIn } from '../API/authentications';
 // icons
-import Facebook from '../Assets/Icons/brandico_facebook.svg';
-import Linkedin from '../Assets/Icons/brandico_linkedin.svg';
-import Instagram from '../Assets/Icons/brandico_instagram.svg';
-import Twitter from '../Assets/Icons/brandico_twitter.svg';
-import Youtube from '../Assets/Icons/brandico_youtube.svg';
-import Logo from '../Assets/Icons/logo-Belcorp-main.svg';
-
+import Logo from '../Assets/Icons/logos Belcorp_Belcorp Color 1.svg';
+import Background from '../Assets/belcorp-background.svg';
 import './login.css';
 
 export default function Login() {
@@ -23,7 +18,6 @@ export default function Login() {
 
   const funcionAlgo = (prov) => auth.signInWithPopup(prov).then((result) => {
     localStorage.setItem('token', result.credential.accessToken);
-    console.log(result.credential.accessToken);
   }).catch((error) => {
     console.log(error);
   });
@@ -46,9 +40,10 @@ export default function Login() {
       })
       .catch((err) => console.log(err));
   };
-  console.log(password);
+
   return (
     <div className="login-container">
+      <img src={Background} className="background-image" alt="belcorp" />
       <form className="login-form" onSubmit={login}>
         <h1>Legal Keeper</h1>
         <h2>INICIAR SESIÓN</h2>
@@ -83,23 +78,6 @@ export default function Login() {
       </form>
       <div className="logo-login">
         <img src={Logo} alt="Belcorp" />
-      </div>
-      <div className="social-media-bar">
-        <a href="https://es-la.facebook.com/SomosBelcorpOficial">
-          <img src={Facebook} alt="Facebook page" />
-        </a>
-        <a href="https://es-la.facebook.com/SomosBelcorpOficial">
-          <img src={Linkedin} alt="Linkedin page" />
-        </a>
-        <a href="https://es-la.facebook.com/SomosBelcorpOficial">
-          <img src={Instagram} alt="Instagram page" />
-        </a>
-        <a href="https://es-la.facebook.com/SomosBelcorpOficial">
-          <img src={Twitter} alt="Twitter page" />
-        </a>
-        <a href="https://es-la.facebook.com/SomosBelcorpOficial">
-          <img src={Youtube} alt="Youtube page" />
-        </a>
       </div>
     </div>
   );

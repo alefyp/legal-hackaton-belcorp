@@ -3,15 +3,56 @@
 /* Parte de los riesgos LLEVARME ESTO AL OTRO CSS*/
 
 /* LA TABLAAAAAAAA */
-.risk-table input{
-  /* nobody needs to know the things ive done */
+/* .risk-table input{
   margin-top: -20px;
+} */
+
+.risk-table select{
+  margin-top: 20px;
 }
+
 
 .risk-table{
   border-bottom: 1px solid #C4C4C4;
 }
 
+.add-risk-add-new{
+  fill: #605151;
+  width: 45px;
+  padding: 10px;
+}
+
+.new-line-add-risk{
+  background: none;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin: 10px 0;;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.new-line-add-risk:hover{
+  background: whitesmoke;
+}
+
+
+.adding-risk-attachments{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.adding-risk-attachments table{
+  width: 100%;
+  text-align: center;
+}
+
+.adding-risk-countries{
+  border-bottom: 1px solid #C4C4C4;
+}
 
 
 /* el checkbox */
@@ -20,7 +61,7 @@
 
 .adding-project-new-risk{
   border: 1px solid #C4C4C4;
-  padding: 0 20px;
+  padding: 20px;
   margin-bottom: 10px;
 }
 
@@ -30,6 +71,7 @@
 
 .adding-risk-aux_text{
   color: #91A1BE;
+  margin: 20px 0;
 }
 
 .adding-risk-countries{
@@ -64,4 +106,9 @@
   display: flex;
   justify-content: flex-end;
   margin-bottom: 50px;
+}
+
+.add-risk-delete-button{
+  background: none;
+  border: none;
 }
