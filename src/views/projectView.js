@@ -16,22 +16,20 @@ import {
 
 export default function ProjectView() {
   const [project, setProject] = useState([]);
+  const [stateApi, setStateApi] = useState([]);
 
   useEffect(() => {
     listenAllDocs(setProject, 'projectos');
+    listenAllDocs(setStateApi, 'projectos');
   }, []);
 
   // const [project, setProject] = useState([]);
-
   // const api = schema;
-  // console.log(api);
+
   const [grid, setGrid] = useState(true);
   const [list, setList] = useState(false);
   // const [project, setProject] = useState(api);
   const [search, setSearch] = useState('');
-  const [level, setLevel] = useState('');
-  const [kind, setKind] = useState('');
-  const [sort, setSort] = useState('');
 
   /*   useEffect(() => {
     gettingData('projects').then((doc) => {
@@ -39,42 +37,39 @@ export default function ProjectView() {
       setProject(proyectos);
     });
   }, []); */
-  console.log(project);
   return (
     <div className="container-sections">
       <section className="container-projects">
         <div className="header-projects">
           <h2>Proyectos</h2>
           <Filters
+            Api={stateApi}
             setGrid={setGrid}
             setList={setList}
-            setSearch={setSearch}
             search={search}
-            project={project}
             setProject={setProject}
-            level={level}
-            kind={kind}
-            sort={sort}
-            setLevel={setLevel}
-            setKind={setKind}
-            setSort={setSort}
+            setSearch={setSearch}
           />
         </div>
-        <div className="card-container">
+        <div className="scrolling-Box">
           {list === false && grid === true ? project.map((proj) => (
             <ProjectCards key={`${proj.name}Card`} project={proj} />
           )) : null }
           {list === true && grid === false ? project.map((proj) => (
             <ProjectsList key={`${proj.name}List`} project={proj} />
           )) : null}
-          {search}
         </div>
       </section>
       <section className="container-updates">
         <div className="container-header-updates">
           <h2>Actividad reciente</h2>
         </div>
-        <UpdateCard />
+        <div className="container-cards">
+          <UpdateCard />
+          <UpdateCard />
+          <UpdateCard />
+          <UpdateCard />
+        </div>
       </section>
     </div>
   );

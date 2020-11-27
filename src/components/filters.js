@@ -8,10 +8,10 @@ import Lupita from '../Assets/Icons/Lupa.svg';
 import './filters.css';
 
 export default function Filters({
-  setGrid, setList, setSearch, search, project, setProject,
+  setGrid, setList, search, setSearch, Api, setProject,
 }) {
   const options = [
-    { label: 'Mostrar todos' },
+    { label: 'Mostrar todos', value: 'All', typeFilter: 'All' },
     {
       label: 'Cronológico',
       options: [{ label: 'Ascendente', value: 'Asc', typeFilter: 'Cronologico' },
@@ -38,27 +38,65 @@ export default function Filters({
         { label: 'Riesgo de Libre Competencia', value: 'Riesgo de Libre Competencia', typeFilter: 'Tipo' }],
     },
   ];
-
+  const searchFunc = (match) => {
+    if (match === '') {
+      setProject(Api);
+    } else {
+      const filtroBusqueda = Api.filter((prj) => prj.name.includes(match));
+      setProject(filtroBusqueda);
+    }
+  };
+  const typing = (e) => {
+    e.persist();
+    setSearch(e.target.value);
+    searchFunc(e.target.value);
+  };
+  const arrIdx = [];
   const filterFunc = (event, type) => {
+    let arrRisk;
     if (type === 'Tipo') {
       // eslint-disable-next-line max-len
-      setProject(project.map((risk) => risk.risks.filter((typeRisk) => typeRisk.type.includes(event))));
+      arrRisk = Api.map((proj) => proj.risks.filter((typeRisk) => typeRisk.type.includes(event)));
+      // eslint-disable-next-line no-plusplus
+      for (let i = 0; i < arrRisk.length; i++) {
+        if (arrRisk[i].length !== 0) {
+          arrIdx.push(i);
+        }
+      }
+      const otherArr = arrIdx.map((i) => Api[i]);
+      setProject(otherArr);
     }
     if (type === 'Nivel') {
       // eslint-disable-next-line max-len
-      setProject(project.map((risk) => risk.risks.filter((typeRisk) => typeRisk.level.includes(event))));
+      arrRisk = Api.map((proj) => proj.risks.filter((typeRisk) => typeRisk.level.includes(event)));
+      // eslint-disable-next-line no-plusplus
+      for (let i = 0; i < arrRisk.length; i++) {
+        if (arrRisk[i].length !== 0) {
+          arrIdx.push(i);
+        }
+      }
+      const otherArr = arrIdx.map((i) => Api[i]);
+      setProject(otherArr);
     }
-    if (type === 'Cronologico') {
+    if (type === 'All') {
+      setProject(Api);
+    }
+    if (type === 'Cronologico' && event === 'Asc') {
       // eslint-disable-next-line max-len
-      setProject(project.map((risk) => risk.sort()));
+      const arrSortA = Api.sort((lastDate, firstDate) => lastDate.startingDate - firstDate.startingDate);
+      setProject(arrSortA);
     }
-    console.log(event);
+    if (type === 'Cronologico' && event === 'Desc') {
+      // eslint-disable-next-line max-len
+      const arrSort = Api.sort((lastDate, firstDate) => lastDate.startingDate - firstDate.startingDate);
+      setProject(arrSort.reverse());
+    }
   };
   return (
     <div className="container-filters">
       <div className="search-input">
         <img src={Lupita} alt="Buscar" />
-        <input placeholder="Buscar por nombre" className="search-input" onChange={async (e) => { setSearch(e.target.value); setProject(project.filter((prj) => prj.name.includes(search))); }} />
+        <input placeholder="Buscar por nombre" className="search-input" value={search} onChange={typing} />
       </div>
       <Select
         className="select-filter"
