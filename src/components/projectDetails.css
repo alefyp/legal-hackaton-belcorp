@@ -85,8 +85,12 @@
 }
 .download {
   background-color: #a6b2c8;
-  color: #ffffff;
+}
+
+.download a {
+  color: #000000;
   text-decoration: none;
+  cursor: pointer;
 }
 .scrolling-Box-description {
   width: 100%;

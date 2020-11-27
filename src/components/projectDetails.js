@@ -107,22 +107,12 @@ export default function projectDetails() {
               fileName={`${object.name}.pdf`}>
               {({
                 loading,
-              }) => (loading ? 'DESCARGANDO...' : 'DESCARGA')}
+              }) => (loading ? <p>DESCARGANDO...</p> : <p>DESCARGA</p>)}
             </PDFDownloadLink>
           </div>
-          {/* <button
-            type="button"
-            className="download details-button"
-            // onClick={handleClick}
-            >
-            DESCARGAR
-          </button> */}
 
         </div>
-        <MyDocument project={object} risks={risks} />
-        {/* <View style={styles.section}>
-        <Text>Section #2</Text>
-      </View> */}
+        {/* <MyDocument project={object} risks={risks} /> */}
 
       </div>
 
