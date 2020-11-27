@@ -56,7 +56,7 @@ export default function Filters({
     let arrRisk;
     if (type === 'Tipo') {
       // eslint-disable-next-line max-len
-      arrRisk = Api.map((proj) => proj.risks.filter((typeRisk) => typeRisk.type.includes(event))); 
+      arrRisk = Api.map((proj) => proj.risks.filter((typeRisk) => typeRisk.type.includes(event)));
       // eslint-disable-next-line no-plusplus
       for (let i = 0; i < arrRisk.length; i++) {
         if (arrRisk[i].length !== 0) {
