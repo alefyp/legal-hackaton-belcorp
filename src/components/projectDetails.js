@@ -28,10 +28,21 @@ export default function projectDetails() {
   useEffect(() => {
     // console.log(project);
     if (id) {
-      getADocument(id, 'projectos')
-        .then((doc) => (doc.exists ? console.log({ ...doc.data() }) : console.log('No such document!')))
-        .catch((error) => console.log('Error getting document:', error));
-      console.log(prueba);
+      getADocument(id, 'projectos').then(setPrueba);
+      // const json = JSON.stringify(prueba);
+      // console.log(JSON.stringify(prueba));
+      // setObject(json);
+
+      // .then((doc) => {
+      //   if (doc.exists) {
+      //     setPrueba(() => doc.data());
+      //     console.log(prueba);
+      //   } else {
+      //     // doc.data() will be undefined in this case
+      //     console.log('No such document!');
+      //   }
+      // })
+      // .catch((error) => console.log('Error getting document:', error));
     }
     // console.log(prueba);
   }, [id]);
@@ -42,6 +53,7 @@ export default function projectDetails() {
   return (
     <section className="project-details">
       <div className="project-details-container">
+        <div>{console.log(prueba.risks)}</div>
 
         { status && (
         <Modal closeModal={() => setStatus(false)}>
@@ -54,21 +66,21 @@ export default function projectDetails() {
         )}
         <h3 className="inlineBlocks">PROYECTO</h3>
         <h4 className="inlineBlocks">
-          {object.name}
+          {prueba.name}
         </h4>
         <div>
           <h3 className="subtitleStyle">DESCRIPCIÓN</h3>
           <p className="scrolling-Box-description">
-            {object.description}
+            {prueba.description}
           </p>
         </div>
         <div className="description-details">
           <h6>Cliente</h6>
-          <span>{object.owner || 'Maria Cristina Paredes'}</span>
+          <span>{prueba.owner || 'Maria Cristina Paredes'}</span>
           <h6>Area</h6>
-          <span>{object.area || 'Ventas' }</span>
+          <span>{prueba.area || 'Ventas' }</span>
           <h6>Fecha de lanzamiento</h6>
-          <span>{object.date || '10/06/2020'}</span>
+          <span>{prueba.date || '10/06/2020'}</span>
         </div>
         <h3 className="subtitleStyle">RECOMENDACIONES</h3>
         <p className="subtitle-description">
@@ -76,19 +88,19 @@ export default function projectDetails() {
         </p>
 
         <Recomendaciones
-          arr={object.recomendations}
+          arr={prueba.recomendations}
           setStatus={setStatus}
           setReco={setReco}
         />
         <CountriesContainer
           filterCountry={filterCountry}
           setFilterCountry={setFilterCountry}
-          data={object}
+          data={prueba}
           setData={setRisks}
 
           />
-        {console.log(risks)}
-        <Risks arr={filterCountry === 'Todos' ? object.risks : risks} filterCountry={filterCountry} />
+        {/* {console.log(risks)} */}
+        <Risks arr={filterCountry === 'Todos' ? prueba.risks : risks} filterCountry={filterCountry} />
         <h3 className="subtitleStyle">ARCHIVOS ADJUNTOS</h3>
         <p className="subtitle-description">Descarga, revisa o elimina</p>
 
@@ -103,7 +115,7 @@ export default function projectDetails() {
           </button>
           <div className="download details-button">
             <PDFDownloadLink
-              document={<MyDocument project={object} risks={risks} />}
+              document={<MyDocument project={object} name={prueba.name} risks={risks} />}
               fileName={`${object.name}.pdf`}>
               {({
                 loading,
@@ -112,7 +124,7 @@ export default function projectDetails() {
           </div>
 
         </div>
-        {/* <MyDocument project={object} risks={risks} /> */}
+        {/* <MyDocument project={object} name={prueba.name} risks={risks} /> */}
 
       </div>
 

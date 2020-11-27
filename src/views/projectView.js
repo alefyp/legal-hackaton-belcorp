@@ -30,6 +30,9 @@ export default function ProjectView() {
 
   useEffect(() => {
     listenAllDocs(setProject, 'projectos');
+    // listenAllDocs(setStateApi, 'projectos');
+  }, []);
+  useEffect(() => {
     listenAllDocs(setStateApi, 'projectos');
     listenAllDocs(setUpdates, 'Actualizaciones');
   }, []);

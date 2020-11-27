@@ -160,7 +160,7 @@ export default [
         level: 'Bajo',
         date: '20/07/2020',
         // completed: false,Fiamma de Vinatea
-        responsable: '',
+        responsable: 'Roberto Martinez',
         countries: [
           'Guatemala',
           'Chile',
@@ -168,12 +168,11 @@ export default [
         ],
         attachments: [
           {
-            title: 'Términos y Condiciones',
+            title: 'Política de Cambios y Devoluciones',
             date: '20/07/2020',
-            responsable: 'Michelle Fujii',
-            type: 'wrd',
+            responsable: 'Alexa Cortez',
+            type: 'pdf',
           },
-
         ],
       },
     ],
