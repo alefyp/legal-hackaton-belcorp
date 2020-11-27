@@ -119,7 +119,7 @@ export default function projectDetails() {
               fileName={`${object.name}.pdf`}>
               {({
                 loading,
-              }) => (loading ? <p>DESCARGANDO...</p> : <p>DESCARGA</p>)}
+              }) => (loading ? <p>DESCARGANDO...</p> : <p>DESCARGAR DOCUMENTO</p>)}
             </PDFDownloadLink>
           </div>
 

@@ -7,12 +7,16 @@
   display: flex;
   grid-area: 2/ 2/ 13/13;
   padding: 1rem;
-  /* width: 100%; */
+  margin: 0;
+  width: 100%;
+  overflow: auto;
 }
+
 .project-details-container {
   /* background-color: aquamarine; */
-  width: 80%;
-  margin-left: 5rem;
+  width: 95%;
+  padding-left: 10%;
+  padding-right: 10%;
   /* margin: auto 0; */
 }
 .inlineBlocks {
@@ -70,7 +74,7 @@
 .subtitle-description {
   /* margin: 0.3rem 0; */
   color: #786565;
-  font-size: 0.5rem;
+  font-size: 1rem;
 }
 .button-box-layout {
   display: flex;
