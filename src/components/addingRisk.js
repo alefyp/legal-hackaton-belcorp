@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React from 'react';
 import Agregar from '../Assets/Icons/add-icon-black.svg';
 import Thrash from '../Assets/Icons/trash.svg';
 import './addingRisk.css';
 // aquí va lo de los riesgos, cada cosita de estaas y al grabar, es un nuevo riesgo
 export default function AddingRisk({ handleRisks, addNewRisk }) {
+  const newUser = JSON.parse(localStorage.getItem('newUser'));
   // const riskTableResult = [];
   const riskTypes = [
     'Riesgo Laboral',
@@ -20,9 +21,6 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
 
   const riskLevel = ['Riesgo Alto', 'Riesgo Medio', 'Riesgo Bajo'];
 
-  const [addRiskRow, setAddRiskRow] = useState(0);
-
-  // const [riskArray, setRiskArray] = useState([]);
   const temporalRisk = {};
 
   const newRisk = (e, key) => {
@@ -30,14 +28,8 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
     console.log(temporalRisk);
   };
 
-  const addNewRiskRow = () => {
-    console.log('y ahora qué vergas hago');
-    setAddRiskRow(addRiskRow + 1);
-  };
-
   handleRisks(newRisk);
-  // const [riskTableRows, setriskTableRows] = useState([]);
-  // AQUÍ HAGO MI ROW, VAMOS A VER SI NO TERMINO LLORANDO AAAAAAAAAAAH
+
   return (
     <div className="adding-project-new-risk">
       <p>
@@ -128,7 +120,7 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
               <td>
                 <input
                   required
-                  onChange={(e) => { newRisk(e, 'projectleader'); }}
+                  onChange={(e) => { newRisk(e, 'responsable'); }}
                   type="text"
                   placeholder="Persona o área" />
               </td>
@@ -141,10 +133,10 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
             </tr>
           </tbody>
         </table>
-        <button type="button" className="new-line-add-risk" onClick={() => addNewRiskRow()}>
+        {/* <button type="button" className="new-line-add-risk" onClick={() => addNewRiskRow()}>
           <img className="add-risk-add-new" src={Agregar} alt="add-new" />
           AGREGAR NUEVA LÍNEA
-        </button>
+        </button> */}
       </div>
 
       <p className="adding-risk-aux_text">3 de 3 Adjuntar Documentos</p>
@@ -160,9 +152,23 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <td>
               <input type="file" />
-            </tr>
+            </td>
+            <td>
+              <input type="date" />
+            </td>
+            <td>
+              <p>{newUser.displayName}</p>
+            </td>
+            <td>
+              <input type="text" />
+            </td>
+            <td>
+              <button type="button" className="add-risk-delete-button">
+                <img src={Thrash} alt="delete" />
+              </button>
+            </td>
           </tbody>
         </table>
         <button type="button" className="new-line-add-risk">
