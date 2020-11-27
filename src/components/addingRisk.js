@@ -33,19 +33,25 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
 
   const NewAttachmentRow = (
     <>
-      <label htmlFor="adding-risk-attachment-file">
-        <input
-          className="adding-risk-attachment-file"
-          type="file" />
-      </label>
+      <td>
+        <label htmlFor="adding-risk-attachment-file">
+          <input
+            className="adding-risk-attachment-file"
+            type="file" />
+        </label>
+      </td>
 
-      <label htmlFor="adding-risk-attachment-date">
-        <input
-          className="adding-risk-attachment-date"
-          type="date" />
-      </label>
+      <td>
+        <label htmlFor="adding-risk-attachment-date">
+          <input
+            className="adding-risk-attachment-date"
+            type="date" />
+        </label>
+      </td>
 
-      <p>{newUser.displayName}</p>
+      <td>
+        <p>{newUser.displayName}</p>
+      </td>
 
       <label htmlFor="adding-risk-attachment-responsable">
         <input
@@ -188,10 +194,12 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
               <th>Opciones</th>
             </tr>
           </thead>
+
+          <tbody>
+            {attachmentMatrix.map((alefy, idx) => <tr key={idx}>{alefy}</tr>)}
+          </tbody>
         </table>
-        <ul>
-          {attachmentMatrix.map((alefy, idx) => <li key={idx}>{alefy}</li>)}
-        </ul>
+
         <button onClick={() => addNewAttachmentLine()} type="button" className="new-line-add-risk">
           <img className="add-risk-add-new" src={Agregar} alt="add-new" />
           AGREGAR NUEVO DOCUMENTO
