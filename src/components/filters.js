@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
+import React from 'react';
 import Select from 'react-select';
 import Grid from '../Assets/Icons/grid.svg';
 import List from '../Assets/Icons/list.svg';
@@ -38,38 +38,60 @@ export default function Filters({
         { label: 'Riesgo de Libre Competencia', value: 'Riesgo de Libre Competencia', typeFilter: 'Tipo' }],
     },
   ];
-
-  const searchFunc = () => {
-    const filtroBusqueda = Api.filter((prj) => prj.name.includes(search));
-    console.log(filtroBusqueda);
-    return setProject(filtroBusqueda);
+  const searchFunc = (match) => {
+    if (match === '') {
+      setProject(Api);
+    } else {
+      const filtroBusqueda = Api.filter((prj) => prj.name.includes(match));
+      setProject(filtroBusqueda);
+    }
+  };
+  const typing = (e) => {
+    e.persist();
+    setSearch(e.target.value);
+    searchFunc(e.target.value);
   };
 
   const filterFunc = (event, type) => {
+    let arrRisk;
+    let otherArr;
     if (type === 'Tipo') {
       // eslint-disable-next-line max-len
-      const arrRisk = Api.map((risk) => risk.risks.filter((typeRisk) => typeRisk.type.includes(event)));
-      console.log(arrRisk);
+      arrRisk = Api.map((proj) => proj.risks.filter((typeRisk) => typeRisk.type.includes(event)));
+      arrRisk.map((proj) => {
+        if (proj === []) {
+          return otherArr;
+        }
+        return otherArr.push(proj);
+      });
+      console.log(otherArr);
+    /*   arrRisk.forEach((risk) => {
+        if (risk !== []) {
+          otherArr.push(risk);
+        }
+      }); */
     }
     if (type === 'Nivel') {
       // eslint-disable-next-line max-len
-      Api.map((risk) => risk.risks.filter((typeRisk) => typeRisk.level.includes(event)));
+      arrRisk = Api.map((proj) => proj.risks.filter((typeRisk) => typeRisk.level.includes(event)));
+      console.log(arrRisk);
     }
     if (type === 'Cronologico') {
       // eslint-disable-next-line max-len
-      Api.map((risk) => risk.sort());
+      arrRisk = Api.sort((lastDate, firstDate) => {
+        if (lastDate.startingDate > firstDate.startingDate) { return 1; } return -1;
+      });
+      if (event === 'Desc') {
+        arrRisk.reverse();
+      }
     }
-    console.log(event);
+    return otherArr;
   };
-
-  useEffect(() => {
-    setProject(Api);
-  }, [setSearch, search]);
   return (
     <div className="container-filters">
       <div className="search-input">
         <img src={Lupita} alt="Buscar" />
-        <input placeholder="Buscar por nombre" className="search-input" value={search} onChange={async (e) => { e.persist(); await setSearch(e.target.value); console.log(e.target.value); searchFunc(); }} />
+        <input placeholder="Buscar por nombre" className="search-input" value={search} onChange={typing} />
       </div>
       <Select
         className="select-filter"

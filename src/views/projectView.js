@@ -30,7 +30,7 @@ export default function ProjectView() {
   const api = schema;
   const [grid, setGrid] = useState(true);
   const [list, setList] = useState(false);
-  const [project, setProject] = useState([]);
+  const [project, setProject] = useState(api);
   const [search, setSearch] = useState('');
   const [level, setLevel] = useState('');
   const [kind, setKind] = useState('');
@@ -75,6 +75,9 @@ export default function ProjectView() {
         <div className="container-header-updates">
           <h2>Actividad reciente</h2>
         </div>
+        <UpdateCard />
+        <UpdateCard />
+        <UpdateCard />
         <UpdateCard />
       </section>
     </div>
