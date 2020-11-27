@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
     fontSize: '8mm',
   },
   subtitle: {
-    color: '#91A1BE',
+    padding: '3mm',
+    color: '#702785',
     fontWeight: 'bold',
     fontSize: '5mm',
   },
@@ -41,8 +42,47 @@ const styles = StyleSheet.create({
     image: {
       width: '60%',
       padding: 10,
-    //   backgroundColor: 'grey',
     },
+  },
+  // ---------------
+  subtitleTypeRisk:
+    {
+      color: '#702785',
+      fontWeight: 'bold',
+      fontSize: '4mm',
+      padding: '1mm',
+      lineHeight: '1.6',
+      textDecoration: 'underline',
+    },
+  subtitleAttachments:
+    {
+      color: 'black',
+      fontWeight: 'bold',
+      fontSize: '3mm',
+      padding: '2mm 0',
+    },
+  risksContainer: {
+    padding: '2mm',
+    maxWidth: '30%',
+  },
+  risksContainerBox: {
+    padding: '3mm',
+    flex: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignContent: 'space-around',
+    margin: '3mm',
+  },
+  textRisk: {
+    fontSize: '3mm',
+    color: 'black',
+    margin: '0 3mm',
+  },
+  textRiskLevel: {
+    fontSize: '3mm',
+    color: 'black',
+    padding: '2mm 0',
+    fontWeight: 'bold',
   },
 });
 
@@ -77,31 +117,40 @@ const MyDocument = ({ project }) => {
             // eslint-disable-next-line max-len
             project.recomendations.map((r) => <Text style={styles.text} key={r.content}>{r.content}</Text>)
         }
-          {
+          <Text style={styles.subtitle}>Riesgos:</Text>
+          <View style={styles.risksContainerBox}>
+            {
               types.map((type) => grouped[type].map((e, i) => (
-                <View key={`${e.title}0923${i}`}>
+                <View style={styles.risksContainer} key={`${e.title}0923${i}`}>
                   <Text
+                    style={styles.subtitleTypeRisk}
                   >
-                    {`> ${e.type}`}
+                    {`${e.type}`}
 
                   </Text>
                   <Text
+                    style={styles.textRiskLevel}
                   >
-                    {`+ ${e.level}`}
+                    {` ${e.level}`}
 
                   </Text>
                   {
                     e.countries.map((c) => (
-                      <Text key={`${c}0923${i}`}
+                      <Text
+                        key={`${c}0923${i}`}
+                        style={styles.textRisk}
                   >
                         {`- ${c}, `}
 
                       </Text>
                     ))
                   }
+                  <Text style={styles.subtitleAttachments}>Archivos Adjuntos</Text>
                   {
                     e.attachments.map((a) => (
-                      <Text key={`${a.title}0923${i}`}
+                      <Text
+                        key={`${a.title}0923${i}`}
+                        style={styles.textRisk}
                   >
                         {`- ${a.title}, `}
 
@@ -112,6 +161,8 @@ const MyDocument = ({ project }) => {
               )))
 
         }
+          </View>
+
         </View>
       </Page>
     </Document>
