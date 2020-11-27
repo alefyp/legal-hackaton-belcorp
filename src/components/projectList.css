@@ -18,13 +18,22 @@
     align-items: center;
     background-color:  #c4c4c47c;
     width: 88%;
-    height: 80px;
+    height: 70px;
     margin: 0 10px;
     border-radius: 8px;
 }
 
 .container-info-list h3, .container-info-list h4{
     margin:5px 10px 0 10px;
+}
+
+.container-imgs {
+    height: 50px;
+    display: flex;
+}
+.container-imgs img {
+    width: 35px;
+    height: 35px;
 }
 
 .btn-verMas{

@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
   section: {
     display: 'flex',
     flexWrap: 'wrap',
-    alignItems: 'center',
     justifyContent: 'space-around',
   },
   image: {

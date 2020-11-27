@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: space-around;
     position: relative;
     margin: 35px 35px 30px 0;
     width: 35%; 
@@ -38,13 +39,17 @@
     width: 70px;
     height: 70px;
     border-radius: 8px;
-    border:  1px solid #91A1BE;
 }
 
 .container-imgs {
-    height: 85px;
+    height: 80px;
+    display: flex;
+    padding: 20px;
 }
-
+.container-imgs img {
+    width: 40px;
+    height: 40px;
+}
 .btn-verMas-card{
     background-color: #ffffff;
     border:  1px solid #91A1BE;
@@ -53,7 +58,11 @@
     font-size: 0.8em;
     font-weight: bold;
     width: 25%;
-    height: 4em;
-    margin-bottom: 30px;
+    height: 3em;
+    margin-top:20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.349);
+}
+
+.btn-verMas-card link{
+    text-decoration: none;
 }
