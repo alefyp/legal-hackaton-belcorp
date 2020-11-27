@@ -46,8 +46,12 @@
   align-content: center;
 }
 .adding-risk-attachments table{
-  width: 80%;
+  width: 100%;
   text-align: center;
+}
+
+.adding-risk-countries{
+  border-bottom: 1px solid #C4C4C4;
 }
 
 
