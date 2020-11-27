@@ -1,5 +1,6 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import Agregar from '../Assets/Icons/add-icon-black.svg';
 import Thrash from '../Assets/Icons/trash.svg';
 import './addingRisk.css';
@@ -29,6 +30,43 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
   };
 
   handleRisks(newRisk);
+
+  const NewAttachmentRow = (
+    <>
+      <label htmlFor="adding-risk-attachment-file">
+        <input
+          className="adding-risk-attachment-file"
+          type="file" />
+      </label>
+
+      <label htmlFor="adding-risk-attachment-date">
+        <input
+          className="adding-risk-attachment-date"
+          type="date" />
+      </label>
+
+      <p>{newUser.displayName}</p>
+
+      <label htmlFor="adding-risk-attachment-responsable">
+        <input
+          className="adding-risk-attachment-responsable"
+          type="text" />
+      </label>
+
+      <button type="button" className="add-risk-delete-button">
+        <img src={Thrash} alt="delete" />
+      </button>
+    </>
+  );
+
+  console.log(NewAttachmentRow);
+
+  const [attachmentMatrix, setAttachmentMatrix] = useState([NewAttachmentRow]);
+
+  const addNewAttachmentLine = () => {
+    // eslint-disable-next-line no-shadow
+    setAttachmentMatrix((attachmentMatrix) => [...attachmentMatrix, NewAttachmentRow]);
+  };
 
   return (
     <div className="adding-project-new-risk">
@@ -147,31 +185,14 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
               <th>Documento</th>
               <th>Fecha</th>
               <th>Agregado por</th>
-              <th>Tipo</th>
               <th>Opciones</th>
             </tr>
           </thead>
-          <tbody>
-            <td>
-              <input type="file" />
-            </td>
-            <td>
-              <input type="date" />
-            </td>
-            <td>
-              <p>{newUser.displayName}</p>
-            </td>
-            <td>
-              <input type="text" />
-            </td>
-            <td>
-              <button type="button" className="add-risk-delete-button">
-                <img src={Thrash} alt="delete" />
-              </button>
-            </td>
-          </tbody>
         </table>
-        <button type="button" className="new-line-add-risk">
+        <ul>
+          {attachmentMatrix.map((alefy, idx) => <li key={idx}>{alefy}</li>)}
+        </ul>
+        <button onClick={() => addNewAttachmentLine()} type="button" className="new-line-add-risk">
           <img className="add-risk-add-new" src={Agregar} alt="add-new" />
           AGREGAR NUEVO DOCUMENTO
         </button>
