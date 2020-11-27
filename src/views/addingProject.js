@@ -18,7 +18,7 @@ export default function addingProject() {
     console.log('aquí va el objetito a firebase: ', projectData);
 
     // PERDÓN QUE HAGA TODO ACÁ ES PARA MÁS RAPIDIN :((((
-    db.collection('proyectines')
+    db.collection('projectos')
       .add(projectData)
       .then((e) => {
         alert('Nuevo proyecto enviado!', e);
