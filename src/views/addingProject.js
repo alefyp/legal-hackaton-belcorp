@@ -10,7 +10,7 @@ export default function addingProject() {
   // Project data queda como el objeto final de nuevo proyecto
   const [projectData, setProjectData] = useState({});
   // Project risk es para la sección de riesgos
-  const [projectRisks, setProjectRisks] = useState([]);
+
   // handlers form
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,19 +28,7 @@ export default function addingProject() {
 
   const handleChanges = (e, key) => {
     projectData[key] = e.target.value;
-    setProjectData({ ...projectData, risks: projectRisks, owner: newUser.displayName });
-  };
-
-  const handleRisks = (e) => {
-    console.log(e, setProjectRisks);
-    // riskTemp[key] = e;
-    // projectRisks.push(e);
-    // setProjectRisks({ ...projectRisks });
-  };
-
-  const addNewRisk = (e) => {
-    console.log('Añadiendo un nuevo riesgo...');
-    setProjectRisks(projectRisks.push(e));
+    setProjectData({ ...projectData, owner: newUser.displayName });
   };
 
   return (
@@ -100,7 +88,7 @@ export default function addingProject() {
           </label>
         </div>
 
-        <AddingRisk handleRisks={handleRisks} addNewRisk={addNewRisk} />
+        <AddingRisk />
 
         <p>Ya casi, click en PUBLICAR para guardar información del proyecto </p>
 
