@@ -32,9 +32,6 @@ export default function ProjectView() {
   const [list, setList] = useState(false);
   const [project, setProject] = useState(api);
   const [search, setSearch] = useState('');
-  const [level, setLevel] = useState('');
-  const [kind, setKind] = useState('');
-  const [sort, setSort] = useState('');
 
   /*   useEffect(() => {
     gettingData('projects').then((doc) => {
@@ -54,12 +51,6 @@ export default function ProjectView() {
             search={search}
             setProject={setProject}
             setSearch={setSearch}
-            level={level}
-            kind={kind}
-            sort={sort}
-            setLevel={setLevel}
-            setKind={setKind}
-            setSort={setSort}
           />
         </div>
         <div className="scrolling-Box">
