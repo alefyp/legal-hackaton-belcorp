@@ -37,9 +37,22 @@ const listenAllDocs = (callback, dataset) => {
       callback(dataArr);
     });
 };
-const getADocument = (docID, collectionName) => firebase
-  .firestore()
-  .collection(collectionName).doc(docID).get();
+const getADocument = (docID, collectionName) => {
+  const docRef = firebase
+    .firestore()
+    .collection(collectionName).doc(docID);
+  // eslint-disable-next-line consistent-return
+  return docRef.get().then((doc) => {
+    if (doc.exists) {
+      // setPrueba(() => doc.data());
+      // console.log(doc.data());
+      return doc.data();
+    }
+    // doc.data() will be undefined in this case
+    console.log('No such document!');
+  })
+    .catch((error) => console.log('Error getting document:', error));
+};
 
 export {
   sendCCI,
