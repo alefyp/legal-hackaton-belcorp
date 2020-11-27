@@ -8,6 +8,7 @@ import view from '../Assets/eye-outlinedview.svg';
 import trash from '../Assets/trashbin.svg';
 
 export default function Attachments({ arr }) {
+  const newArr = arr.map((e) => e.attachments).flat();
   return (
     <>
       <div>
@@ -24,11 +25,13 @@ export default function Attachments({ arr }) {
           </thead>
           <tbody>
             {arr
-              ? (arr.map((element) => (
-                <tr className="table-lines" key={element.title}>
+              ? (newArr.map((element, i) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <tr className="table-lines" key={`${i}${element.title}`}>
+                  {/* {console.log(element)} */}
                   <td>{element.title}</td>
                   <td>{element.date}</td>
-                  <td>{element.responsable || 'Michelle Rojas'}</td>
+                  <td>{element.responsable || 'Jorge Canales'}</td>
 
                   <td className="trash-cell"><img src={element.type === '.pdf' ? iconFileTypePdf : iconFileTypeWrd} alt={iconFileTypeWrd} /></td>
                   <td className="trash-cell">
@@ -42,7 +45,8 @@ export default function Attachments({ arr }) {
                   </td>
 
                 </tr>
-              ))) : <tr><td>Loading</td></tr>}
+              )))
+              : <tr><td>Loading</td></tr>}
 
           </tbody>
         </table>

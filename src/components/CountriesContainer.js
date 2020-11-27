@@ -32,16 +32,17 @@ export default function CountriesContainer({
 }) {
   const handleClick = (name) => {
     // console.log(filterCountry);// BORRA LINEA 30
-    console.log(name);
+    // console.log(name);
     const newArr = [];
-    data.forEach(((obj) => {
+    // console.log(data);
+    data.risks.forEach(((obj) => {
       obj.countries.forEach((country) => {
         if (country === name) {
           newArr.push(obj);
         }
       });
     }));
-    console.log(newArr);
+    // console.log(newArr);
     setData(newArr);
   };
   return (
@@ -52,16 +53,6 @@ export default function CountriesContainer({
 
       </div>
       {
-        //               icons.map((icon) => (
-        //                 <div className="Country-icon" key={icon.path}>
-        //                   <img src={icon.path} alt={icon.name} />
-        //                   <input
-        //                     type="button"
-        //                     value={icon.name}
-        //                     onClick={handleClick}
-        // />
-        //                 </div>
-        //               ))
 
           icons.map((icon) => (
             <button

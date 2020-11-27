@@ -18,7 +18,8 @@ const publishData = (obj, dataset) => firebase
   });
 
 const sendCCI = (arr) => {
-  const iterable = arr.map((element) => publishData(element, 'projects'));
+  console.log(arr);
+  const iterable = arr.map((element) => publishData(element, 'projectos'));
   Promise.all(iterable).then((values) => {
     console.log(values);
   });
@@ -36,10 +37,10 @@ const listenAllDocs = (callback, dataset) => {
       callback(dataArr);
     });
 };
-const getADocument = (docID, collectionName) => {
-  const docRef = firebase.firestore().collection(collectionName).doc(docID);
-  return docRef.get();
-};
+const getADocument = (docID, collectionName) => firebase
+  .firestore()
+  .collection(collectionName).doc(docID);
+
 export {
   sendCCI,
   listenAllDocs,

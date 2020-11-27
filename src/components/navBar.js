@@ -10,6 +10,7 @@ import Proyectos from '../Assets/Icons/Proyectos.svg';
 import Agregar from '../Assets/Icons/Agregar.svg';
 import Perfil from '../Assets/Icons/Perfil.svg';
 import Salir from '../Assets/Icons/Salir.svg';
+
 import ProjectDetails from './projectDetails';
 import ProjectView from '../views/projectView';
 import AddingProject from '../views/addingProject';
@@ -24,9 +25,9 @@ export default function NavBar(viewComponent, setViewComponent) {
       <nav className="navBar">
         <ul>
           <li>
-            <Link to="/dashboard">
-              <img src={Logo} alt="Logo" className="Logo" />
-            </Link>
+            {/* <Link to="/dashboard"> */}
+            <img src={Logo} alt="Logo" className="Logo" />
+            {/* </Link> */}
           </li>
           <li>
             <Link to="/dashboard">
@@ -58,8 +59,9 @@ export default function NavBar(viewComponent, setViewComponent) {
         <Route path="/Agregar">
           <AddingProject />
         </Route>
-        <Route path="/Perfil">
+        <Route path="/dashboard/project:id">
           <ProjectDetails />
+
         </Route>
         {/* <Route path="/Salir">
           <h2>/Salir</h2>

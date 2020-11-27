@@ -1,6 +1,6 @@
 // eslint-disable-next-line max-len
 // import React, { useEffect, useState } from 'react';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Filters from '../components/filters';
 import ProjectCards from '../components/projectCards';
 import ProjectsList from '../components/projectList';
@@ -8,29 +8,27 @@ import ProjectsList from '../components/projectList';
 import UpdateCard from '../components/updateCard';
 import './projectView.css';
 // import Lupita from '../Assets/Icons/Lupa.svg';
-import schema from '../API/data/schema';
-
-// import {
-//   // listenAllDocs,
-//   sendCCI,
-// } from '../API/crud';
 // import schema from '../API/data/schema';
 
-export default function ProjectView() {
-  // const [projectsData, setProjectsData] = useState([]);
-  // const [data, setData] = useState([]);
+import {
+  listenAllDocs,
+} from '../API/crud';
 
-  // useEffect(() => {
-  //   // listenAllDocs(setProjectsData);
-  //   sendCCI(schema);
-  // }, []);
+export default function ProjectView() {
+  const [project, setProject] = useState([]);
+  const [stateApi, setStateApi] = useState([]);
+
+  useEffect(() => {
+    listenAllDocs(setProject, 'projectos');
+    listenAllDocs(setStateApi, 'projectos');
+  }, []);
 
   // const [project, setProject] = useState([]);
+  // const api = schema;
 
-  const api = schema;
   const [grid, setGrid] = useState(true);
   const [list, setList] = useState(false);
-  const [project, setProject] = useState(api);
+  // const [project, setProject] = useState(api);
   const [search, setSearch] = useState('');
 
   /*   useEffect(() => {
@@ -45,7 +43,7 @@ export default function ProjectView() {
         <div className="header-projects">
           <h2>Proyectos</h2>
           <Filters
-            Api={api}
+            Api={stateApi}
             setGrid={setGrid}
             setList={setList}
             search={search}
