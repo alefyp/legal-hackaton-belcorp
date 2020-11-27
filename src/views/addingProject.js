@@ -39,7 +39,7 @@ export default function addingProject() {
   };
 
   const addNewRisk = (e) => {
-    console.log('Añadiendo un nuevo riesgo...');
+    console.log('Añadiendo un nuevo riesgo...', e);
     setProjectRisks(projectRisks.push(e));
   };
 

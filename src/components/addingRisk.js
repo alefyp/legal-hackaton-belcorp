@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
@@ -22,7 +23,13 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
 
   const riskLevel = ['Riesgo Alto', 'Riesgo Medio', 'Riesgo Bajo'];
 
-  const temporalRisk = {};
+  const temporalRisk = {}; // el final final lo meto acá
+  const finalfinalAttachments = [];
+  console.log(finalfinalAttachments);
+
+  const newAttachmentObj = (e, key, index) => {
+    console.log(e, key, index);
+  };
 
   const newRisk = (e, key) => {
     temporalRisk[key] = e.target.value;
@@ -31,11 +38,13 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
 
   handleRisks(newRisk);
 
-  const NewAttachmentRow = (
+  const NewAttachmentRow = (index) => (
     <>
       <td>
         <label htmlFor="adding-risk-attachment-file">
+          {index}
           <input
+            onChange={(e) => { newAttachmentObj(e.target.files[0].name, 'title', index); }}
             className="adding-risk-attachment-file"
             type="file" />
         </label>
@@ -44,6 +53,7 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
       <td>
         <label htmlFor="adding-risk-attachment-date">
           <input
+            onChange={(e) => { newAttachmentObj(e.target.value, 'date', index); }}
             className="adding-risk-attachment-date"
             type="date" />
         </label>
@@ -55,23 +65,24 @@ export default function AddingRisk({ handleRisks, addNewRisk }) {
 
       <label htmlFor="adding-risk-attachment-responsable">
         <input
+          onChange={(e) => { newAttachmentObj(e.target.value, 'responsable', index); }}
           className="adding-risk-attachment-responsable"
           type="text" />
       </label>
 
-      <button type="button" className="add-risk-delete-button">
+      {/* <button type="button" className="add-risk-delete-button">
         <img src={Thrash} alt="delete" />
-      </button>
+        <p>{index}</p>
+      </button> */}
     </>
   );
-
-  console.log(NewAttachmentRow);
 
   const [attachmentMatrix, setAttachmentMatrix] = useState([NewAttachmentRow]);
 
   const addNewAttachmentLine = () => {
+    const index = attachmentMatrix.length;
     // eslint-disable-next-line no-shadow
-    setAttachmentMatrix((attachmentMatrix) => [...attachmentMatrix, NewAttachmentRow]);
+    setAttachmentMatrix((attachmentMatrix) => [...attachmentMatrix, NewAttachmentRow(index)]);
   };
 
   return (
