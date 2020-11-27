@@ -12,25 +12,18 @@
 .container-projects{
     /* no cambies este 70% */
     width: 70%;
-    padding: 20px;
+    padding: 35px;
 }
 
 /* .header-projects{
     display: flex;
 } */
 
-.card-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    overflow: auto;
-    height: 75vh;
-    margin: 10px 0;
-}
-
 .container-updates{
     /* no cambies este 30% */
-    width: 30%; 
+    width: 30%;
+    overflow: auto;
+    height: 75vh;
 }
 
 .container-header-updates{
@@ -45,13 +38,21 @@
     margin:0 10px 0 10px;  
 }
 
-/* .scrolling-Box {
+.container-cards{
+    padding:25px;
+    height: 75vh;
+}
+
+.scrolling-Box {
     overflow-x: auto;
     color: #786565;
     font-size: 1rem;
-    height: 8rem;
-    margin: 1rem 0;
+    height: 75vh;
+    margin: 10px 0;
     padding: 0.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   .scrolling-Box::-webkit-scrollbar {
     width: 0.3rem;
@@ -65,5 +66,5 @@
   .scrolling-Box::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-  } */
+  }
   
