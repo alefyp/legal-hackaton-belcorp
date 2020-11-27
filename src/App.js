@@ -31,7 +31,7 @@ function NonLoggedInRoute({ children, isUserLoggedIn, ...rest }) {
         if (!isUserLoggedIn) {
           return <>{children}</>;
         }
-        return <Redirect to="/dasboard" />;
+        return <Redirect to="/dashboard" />;
       }}
     />
   );

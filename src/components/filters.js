@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect } from 'react';
+import React from 'react';
 import Select from 'react-select';
 import Grid from '../Assets/Icons/grid.svg';
 import List from '../Assets/Icons/list.svg';
@@ -11,7 +11,7 @@ export default function Filters({
   setGrid, setList, search, setSearch, Api, setProject,
 }) {
   const options = [
-    { label: 'Mostrar todos' },
+    { label: 'Mostrar todos', value: 'All', typeFilter: 'All' },
     {
       label: 'Cronológico',
       options: [{ label: 'Ascendente', value: 'Asc', typeFilter: 'Cronologico' },
@@ -38,38 +38,65 @@ export default function Filters({
         { label: 'Riesgo de Libre Competencia', value: 'Riesgo de Libre Competencia', typeFilter: 'Tipo' }],
     },
   ];
-
-  const searchFunc = () => {
-    const filtroBusqueda = Api.filter((prj) => prj.name.includes(search));
-    console.log(filtroBusqueda);
-    return setProject(filtroBusqueda);
+  const searchFunc = (match) => {
+    if (match === '') {
+      setProject(Api);
+    } else {
+      const filtroBusqueda = Api.filter((prj) => prj.name.includes(match));
+      setProject(filtroBusqueda);
+    }
   };
-
+  const typing = (e) => {
+    e.persist();
+    setSearch(e.target.value);
+    searchFunc(e.target.value);
+  };
+  const arrIdx = [];
   const filterFunc = (event, type) => {
+    let arrRisk;
     if (type === 'Tipo') {
       // eslint-disable-next-line max-len
-      const arrRisk = Api.map((risk) => risk.risks.filter((typeRisk) => typeRisk.type.includes(event)));
-      console.log(arrRisk);
+      arrRisk = Api.map((proj) => proj.risks.filter((typeRisk) => typeRisk.type.includes(event)));
+      // eslint-disable-next-line no-plusplus
+      for (let i = 0; i < arrRisk.length; i++) {
+        if (arrRisk[i].length !== 0) {
+          arrIdx.push(i);
+        }
+      }
+      const otherArr = arrIdx.map((i) => Api[i]);
+      setProject(otherArr);
     }
     if (type === 'Nivel') {
       // eslint-disable-next-line max-len
-      Api.map((risk) => risk.risks.filter((typeRisk) => typeRisk.level.includes(event)));
+      arrRisk = Api.map((proj) => proj.risks.filter((typeRisk) => typeRisk.level.includes(event)));
+      // eslint-disable-next-line no-plusplus
+      for (let i = 0; i < arrRisk.length; i++) {
+        if (arrRisk[i].length !== 0) {
+          arrIdx.push(i);
+        }
+      }
+      const otherArr = arrIdx.map((i) => Api[i]);
+      setProject(otherArr);
     }
-    if (type === 'Cronologico') {
+    if (type === 'All') {
+      setProject(Api);
+    }
+    if (type === 'Cronologico' && event === 'Asc') {
       // eslint-disable-next-line max-len
-      Api.map((risk) => risk.sort());
+      const arrSortA = Api.sort((lastDate, firstDate) => lastDate.startingDate - firstDate.startingDate);
+      setProject(arrSortA);
     }
-    console.log(event);
+    if (type === 'Cronologico' && event === 'Desc') {
+      // eslint-disable-next-line max-len
+      const arrSort = Api.sort((lastDate, firstDate) => lastDate.startingDate - firstDate.startingDate);
+      setProject(arrSort.reverse());
+    }
   };
-
-  useEffect(() => {
-    setProject(Api);
-  }, []);
   return (
     <div className="container-filters">
       <div className="search-input">
         <img src={Lupita} alt="Buscar" />
-        <input placeholder="Buscar por nombre" className="search-input" value={search} onChange={async (e) => { e.persist(); await setSearch(e.target.value); console.log(e.target.value); searchFunc(); }} />
+        <input placeholder="Buscar por nombre" className="search-input" value={search} onChange={typing} />
       </div>
       <Select
         className="select-filter"

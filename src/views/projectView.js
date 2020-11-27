@@ -16,19 +16,18 @@ import {
 
 export default function ProjectView() {
   const [project, setProject] = useState([]);
+  const [stateApi, setStateApi] = useState([]);
 
   useEffect(() => {
     listenAllDocs(setProject, 'projectos');
+    listenAllDocs(setStateApi, 'projectos');
   }, []);
 
   // const api = schema;
-  // console.log(api);
+
   const [grid, setGrid] = useState(true);
   const [list, setList] = useState(false);
   const [search, setSearch] = useState('');
-  const [level, setLevel] = useState('');
-  const [kind, setKind] = useState('');
-  const [sort, setSort] = useState('');
 
   return (
     <div className="container-sections">
@@ -36,21 +35,15 @@ export default function ProjectView() {
         <div className="header-projects">
           <h2>Proyectos</h2>
           <Filters
-            Api={project}
+            Api={stateApi}
             setGrid={setGrid}
             setList={setList}
             search={search}
             setProject={setProject}
             setSearch={setSearch}
-            level={level}
-            kind={kind}
-            sort={sort}
-            setLevel={setLevel}
-            setKind={setKind}
-            setSort={setSort}
           />
         </div>
-        <div className="card-container">
+        <div className="scrolling-Box">
           {list === false && grid === true ? project.map((proj) => (
             <ProjectCards key={`${proj.name}Card`} project={proj} />
           )) : null }
@@ -63,7 +56,12 @@ export default function ProjectView() {
         <div className="container-header-updates">
           <h2>Actividad reciente</h2>
         </div>
-        <UpdateCard />
+        <div className="container-cards">
+          <UpdateCard />
+          <UpdateCard />
+          <UpdateCard />
+          <UpdateCard />
+        </div>
       </section>
     </div>
   );
