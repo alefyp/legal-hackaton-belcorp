@@ -33,7 +33,7 @@ export default function Filters({
         { label: 'Riesgo de Propiedad Intelectual', value: 'Riesgo de Propiedad Intelectual', typeFilter: 'Tipo' },
         { label: 'Riesgo Ambiental', value: 'Riesgo Ambiental', typeFilter: 'Tipo' },
         { label: 'Riesgo Publicitario', value: 'Riesgo Publicitario', typeFilter: 'Tipo' },
-        { label: 'Riesgo de Consumidor', value: 'Riesgo de Consumidor', typeFilter: 'Tipo' },
+        { label: 'Riesgo de Consumidor', value: 'Riesgo Consumidor', typeFilter: 'Tipo' },
         { label: 'Riesgo Seguridad de la Información', value: 'Riesgo Seguridad de la Información', typeFilter: 'Tipo' },
         { label: 'Riesgo de Libre Competencia', value: 'Riesgo de Libre Competencia', typeFilter: 'Tipo' }],
     },
