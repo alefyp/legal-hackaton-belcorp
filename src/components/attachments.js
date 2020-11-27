@@ -9,7 +9,6 @@ import trash from '../Assets/trashbin.svg';
 
 export default function Attachments({ arr }) {
   const newArr = arr.map((e) => e.attachments).flat();
-  // const validateArr = newArr || <h1>no items</h1>;
   return (
     <>
       <div>
@@ -32,7 +31,7 @@ export default function Attachments({ arr }) {
                   {/* {console.log(element)} */}
                   <td>{element.title}</td>
                   <td>{element.date}</td>
-                  <td>{element.responsable || 'Michelle Rojas'}</td>
+                  <td>{element.responsable || 'Jorge Canales'}</td>
 
                   <td className="trash-cell"><img src={element.type === '.pdf' ? iconFileTypePdf : iconFileTypeWrd} alt={iconFileTypeWrd} /></td>
                   <td className="trash-cell">

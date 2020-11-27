@@ -1,5 +1,5 @@
 export default [
-  {
+  { // "Alexa Cortez", 'Camila Rivera', 'Claudia Arenas', 'Sam Hinojosa',
     name: 'Mi Tienda Online',
     description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link.  ',
     startingDate: '15 de enero 2021',
@@ -24,6 +24,8 @@ export default [
         countries: [
           'Colombia',
           'Peru',
+          'Guatemala',
+          'Brasil',
         ],
       },
       {
@@ -31,7 +33,7 @@ export default [
         date: '22 de noviembre de 2020',
         content: 'Los contratos de afiliación de las consultoras deberán cumplir con el modelo tributario aplicable a cada país.',
         countries: [
-          'Mexico',
+          'Bolivia',
           'Colombia',
           'Peru',
         ],
@@ -41,8 +43,8 @@ export default [
         date: '22 de noviembre de 2020',
         content: ' Todas las promociones de venta (concursos, sorteos o descuentos) deberán cumplir con los requisitos legales publicitarios: vigencia, stock mínimo de unidades, restricciones o condiciones de ser aplicables.',
         countries: [
-          'Colombia',
-          'Peru',
+          'Guatemala',
+          'Chile',
         ],
       },
     ],
@@ -51,7 +53,7 @@ export default [
         type: 'Riesgo Financiero',
         level: 'Alto',
         date: '20/07/2020',
-        responsable: '',
+        responsable: 'Alexa Cortez',
         countries: [
           'Peru',
           'Colombia',
@@ -60,19 +62,19 @@ export default [
           {
             title: 'Politica de Privacidad',
             date: '20/07/2020',
-            responsable: 'Alexandra Rojas',
+            responsable: 'Camila Rivera',
             type: '.pdf',
           },
           {
             title: 'Opinión del asesor externo',
             date: '20/07/2020',
-            responsable: 'Fiamma de Vinatea',
+            responsable: 'Alexa Cortez',
             type: '.wrd',
           },
           {
             title: 'Política de Cambios y Devoluciones',
             date: '20/07/2020',
-            responsable: 'Alexandra Rojas',
+            responsable: 'Claudia Arenas',
             type: '.pdf',
           },
         ],
@@ -81,7 +83,7 @@ export default [
         type: 'Riesgo Tributario',
         level: 'Bajo',
         date: '20/07/2020',
-        responsable: 'Alexandra Rojas',
+        responsable: '',
         countries: [
           'Peru',
         ],
@@ -89,7 +91,7 @@ export default [
           {
             title: 'Términos y Condiciones',
             date: '20/07/2020',
-            responsable: 'Michelle Fujii',
+            responsable: 'Sam Hinojosa',
             type: 'pdf',
           },
 
@@ -101,7 +103,7 @@ export default [
         level: 'Medio',
         date: '20/07/2020',
         // completed: false,
-        responsable: '',
+        responsable: 'Claudia Arenas',
         countries: [
           'Brasil',
         ],
@@ -109,7 +111,7 @@ export default [
           {
             title: 'Términos y Condiciones',
             date: '20/07/2020',
-            responsable: 'Alexandra Rojas',
+            responsable: 'Pamela Rojas',
             type: 'pdf',
           },
 
@@ -120,7 +122,7 @@ export default [
         level: 'Medio',
         date: '20/07/2020',
         // completed: false,
-        responsable: 'Michelle Fujii',
+        responsable: '',
         countries: [
           'Chile',
         ],
@@ -139,7 +141,7 @@ export default [
         level: 'Medio',
         date: '20/07/2020',
         // completed: false,Fiamma de Vinatea
-        responsable: 'Fiamma de Vinatea',
+        responsable: 'Roberto Martinez',
         countries: [
           'Guatemala',
         ],
@@ -147,7 +149,7 @@ export default [
           {
             title: 'Términos y Condiciones',
             date: '20/07/2020',
-            responsable: 'Michelle Fujii',
+            responsable: '',
             type: 'wrd',
           },
 
@@ -158,7 +160,7 @@ export default [
         level: 'Bajo',
         date: '20/07/2020',
         // completed: false,Fiamma de Vinatea
-        responsable: 'Fiamma de Vinatea',
+        responsable: '',
         countries: [
           'Guatemala',
           'Chile',
@@ -218,7 +220,7 @@ export default [
         type: 'Riesgo Tributario',
         level: 'Alto',
         date: '20/07/2020',
-        responsable: '',
+        responsable: 'Alexa Cortez',
         countries: [
           'Peru',
           'Colombia',
@@ -227,7 +229,7 @@ export default [
           {
             title: 'Términos y Condiciones',
             date: '20/07/2020',
-            responsable: 'Camila Rivera',
+            responsable: 'Camila Rivera', // "Alexa Cortez", 'Camila Rivera'
             type: 'pdf',
           },
 

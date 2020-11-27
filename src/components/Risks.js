@@ -1,15 +1,15 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React from 'react';
 
 import trash from '../Assets/Icons/trash.svg';
-import schema from '../API/data/schema';
+// import schema from '../API/data/schema';
 import './Risk.css';
 
 export default function Risks({ arr }) {
-  const initialState = schema[0].risks;
+  // const initialState = schema[0].risks;
   // eslint-disable-next-line no-unused-vars
-  const [data, setData] = useState(initialState);// recibo solo uno
+  // const [data, setData] = useState(initialState);// recibo solo uno
   return (
     <>
 
