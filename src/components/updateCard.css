@@ -33,4 +33,5 @@
     justify-content: flex-end;
     padding: 20px;
     font-weight: bold;
+    cursor: pointer;
 }

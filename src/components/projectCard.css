@@ -3,16 +3,19 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    margin: 30px 35px 30px 0;
-    width: 38%; 
-    height: 210px;  
+    margin: 35px 35px 30px 0;
+    width: 35%; 
+    height: 230px;  
     border-radius: 20px;
-    border:  1px solid #504f4f;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border:  1px solid #91A1BE;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.308);
+    color: #292e36;
+    font-weight: bold;
+    padding: 10px;
 }
 
 .container-project h3{
-    margin:30px 0 0 0;
+    margin:32px 0 0 0;
 } 
 .container-project h4{
     margin:15px 0 0 0;
@@ -31,23 +34,26 @@
     position: absolute;
     z-index: 1;
     background-color: white;
-    top:-30px;
-    width: 60px;
-    height: 60px;
+    top:-32px;
+    width: 70px;
+    height: 70px;
     border-radius: 8px;
-    border:  1px solid #504f4f;
+    border:  1px solid #91A1BE;
 }
 
 .container-imgs {
-    height: 70px;
+    height: 85px;
 }
 
-.btn-verMas{
-    background-color: #C4C4C4;
-    border:  1px solid #ffffff;
+.btn-verMas-card{
+    background-color: #ffffff;
+    border:  1px solid #91A1BE;
     border-radius: 8px;
-    font-size: 1em;
+    cursor: pointer;
+    font-size: 0.8em;
     font-weight: bold;
-    width: 30%;
+    width: 25%;
+    height: 4em;
     margin-bottom: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.349);
 }

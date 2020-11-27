@@ -11,7 +11,7 @@ export default function Filters({
   setGrid, setList, search, setSearch, Api, setProject,
 }) {
   const options = [
-    { label: 'Mostrar todos' },
+    { label: 'Mostrar todos', value: 'All', typeFilter: 'All' },
     {
       label: 'Cronológico',
       options: [{ label: 'Ascendente', value: 'Asc', typeFilter: 'Cronologico' },
@@ -51,41 +51,46 @@ export default function Filters({
     setSearch(e.target.value);
     searchFunc(e.target.value);
   };
-
+  const arrIdx = [];
   const filterFunc = (event, type) => {
     let arrRisk;
-    let otherArr;
     if (type === 'Tipo') {
       // eslint-disable-next-line max-len
       arrRisk = Api.map((proj) => proj.risks.filter((typeRisk) => typeRisk.type.includes(event)));
-      arrRisk.map((proj) => {
-        if (proj === []) {
-          return otherArr;
+      // eslint-disable-next-line no-plusplus
+      for (let i = 0; i < arrRisk.length; i++) {
+        if (arrRisk[i].length !== 0) {
+          arrIdx.push(i);
         }
-        return otherArr.push(proj);
-      });
-      console.log(otherArr);
-    /*   arrRisk.forEach((risk) => {
-        if (risk !== []) {
-          otherArr.push(risk);
-        }
-      }); */
+      }
+      const otherArr = arrIdx.map((i) => Api[i]);
+      setProject(otherArr);
     }
     if (type === 'Nivel') {
       // eslint-disable-next-line max-len
       arrRisk = Api.map((proj) => proj.risks.filter((typeRisk) => typeRisk.level.includes(event)));
-      console.log(arrRisk);
-    }
-    if (type === 'Cronologico') {
-      // eslint-disable-next-line max-len
-      arrRisk = Api.sort((lastDate, firstDate) => {
-        if (lastDate.startingDate > firstDate.startingDate) { return 1; } return -1;
-      });
-      if (event === 'Desc') {
-        arrRisk.reverse();
+      // eslint-disable-next-line no-plusplus
+      for (let i = 0; i < arrRisk.length; i++) {
+        if (arrRisk[i].length !== 0) {
+          arrIdx.push(i);
+        }
       }
+      const otherArr = arrIdx.map((i) => Api[i]);
+      setProject(otherArr);
     }
-    return otherArr;
+    if (type === 'All') {
+      setProject(Api);
+    }
+    if (type === 'Cronologico' && event === 'Asc') {
+      // eslint-disable-next-line max-len
+      const arrSortA = Api.sort((lastDate, firstDate) => lastDate.startingDate - firstDate.startingDate);
+      setProject(arrSortA);
+    }
+    if (type === 'Cronologico' && event === 'Desc') {
+      // eslint-disable-next-line max-len
+      const arrSort = Api.sort((lastDate, firstDate) => lastDate.startingDate - firstDate.startingDate);
+      setProject(arrSort.reverse());
+    }
   };
   return (
     <div className="container-filters">

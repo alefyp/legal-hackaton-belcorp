@@ -3,7 +3,7 @@ export default [
     name: 'Mi Tienda Online',
     description: 'Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link. Nuevo canal de venta online para las consultoras que les permitirá compartir un link personalizado a sus clientes donde ellos podrán comprar los productos de las 3 marcas directamente a Belcorp pero generando un porcentaje de ganancia para la consultora que compartió el link.',
 
-    startingDate: '15 de enero 2021',
+    startingDate: '30 de enero 2021',
     owner: 'Maria Cristina Paredes',
     recomendations: [
       {

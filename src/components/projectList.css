@@ -27,7 +27,7 @@
     margin:5px 10px 0 10px;
 }
 
-.container-list button{
+.btn-verMas{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,9 +35,10 @@
     background: none;
     border: none;
     cursor: pointer;
-    margin-bottom: 0;
+    margin: 0 20px;
+    color:#702785;
 }
 
-..container-list button img{
-    background-color:#702785;
+.container-list button img{
+    color:#702785;
 }

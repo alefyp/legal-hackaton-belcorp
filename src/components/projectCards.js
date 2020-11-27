@@ -10,7 +10,7 @@ export default function ProjectCards({ project }) {
       <h3>{project.name}</h3>
       <h4>25 Enero 2021</h4>
       <div className="container-imgs" />
-      <button type="button" className="btn-verMas">Ver más</button>
+      <button type="button" className="btn-verMas-card">Ver más</button>
     </div>
   );
 }

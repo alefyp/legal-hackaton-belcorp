@@ -62,7 +62,7 @@ export default function ProjectView() {
             setSort={setSort}
           />
         </div>
-        <div className="card-container">
+        <div className="scrolling-Box">
           {list === false && grid === true ? project.map((proj) => (
             <ProjectCards key={`${proj.name}Card`} project={proj} />
           )) : null }
@@ -75,10 +75,12 @@ export default function ProjectView() {
         <div className="container-header-updates">
           <h2>Actividad reciente</h2>
         </div>
-        <UpdateCard />
-        <UpdateCard />
-        <UpdateCard />
-        <UpdateCard />
+        <div className="container-cards">
+          <UpdateCard />
+          <UpdateCard />
+          <UpdateCard />
+          <UpdateCard />
+        </div>
       </section>
     </div>
   );
