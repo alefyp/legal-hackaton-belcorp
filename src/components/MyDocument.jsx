@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import {
-  Document, Page, Text, View, StyleSheet, Font,
+  Document, Page, Text, View, StyleSheet, Font, Image,
 } from '@react-pdf/renderer';
 import groupBy from '../API/Helpers';
 // import Logo from '../Assets/logoBel.svg';
@@ -39,17 +39,18 @@ const styles = StyleSheet.create({
   text: {
     fontSize: '3.5mm',
     color: 'black',
-    padding: '5mm',
+    padding: '3mm',
   },
   section: {
     display: 'flex',
-    textAlign: 'center',
-    alignItems: 'center',
     flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
   image: {
     width: '20%',
     padding: '5mm',
+    backgroundColor: 'green',
   },
 });
 
@@ -63,22 +64,26 @@ const MyDocument = ({ project }) => {
         {/* <View style={styles.section}> */}
         {/* <Image style={styles.image} src="https://user-images.githubusercontent.com/5600341/27505816-c8bc37aa-587f-11e7-9a86-08a2d081a8b9.png" />
 
-        {/* <Text>Section #1</Text>  <Image
-            style={styles.image}
-            src="../Assets/logoBel.svg"
-        /> */}
+        {/* <Text>Section #1</Text>   */}
         {/* </View> */}
         <View>
-          <Text style={styles.title}>Informe Legal</Text>
-
-          <Text style={styles.subtitle}>Proyecto: </Text>
-          <Text style={styles.info}>{project.name}</Text>
-          <Text style={styles.subtitle}>Cliente:  </Text>
-          <Text style={styles.info}>{project.owner}</Text>
-          <Text style={styles.subtitle}>Área: </Text>
-          <Text style={styles.info}>{project.area}</Text>
-          <Text style={styles.subtitle}>Fecha de lanzamiento: </Text>
-          <Text style={styles.info}>{project.date || '10/06/2020'}</Text>
+          <View style={styles.section}>
+            <Image
+              style={styles.image}
+              src="../Assets/photoBelcorp.jpg"
+          />
+            <Text style={styles.title}>Informe Legal</Text>
+          </View>
+          <View style={styles.section}>
+            <Text style={styles.subtitle}>Proyecto: </Text>
+            <Text style={styles.info}>{project.name}</Text>
+            <Text style={styles.subtitle}>Cliente:  </Text>
+            <Text style={styles.info}>{project.owner}</Text>
+            <Text style={styles.subtitle}>Área: </Text>
+            <Text style={styles.info}>{project.area}</Text>
+            <Text style={styles.subtitle}>Fecha de lanzamiento: </Text>
+            <Text style={styles.info}>{project.date || '10/06/2020'}</Text>
+          </View>
 
           <Text style={styles.subtitle}>Descripción: </Text>
           <Text style={styles.text}>{project.description}</Text>
