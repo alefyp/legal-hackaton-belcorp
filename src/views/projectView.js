@@ -23,20 +23,12 @@ export default function ProjectView() {
     listenAllDocs(setStateApi, 'projectos');
   }, []);
 
-  // const [project, setProject] = useState([]);
   // const api = schema;
 
   const [grid, setGrid] = useState(true);
   const [list, setList] = useState(false);
-  // const [project, setProject] = useState(api);
   const [search, setSearch] = useState('');
 
-  /*   useEffect(() => {
-    gettingData('projects').then((doc) => {
-      const proyectos = doc.docs.map((algo) => ({ id: algo.id, ...algo.data() }));
-      setProject(proyectos);
-    });
-  }, []); */
   return (
     <div className="container-sections">
       <section className="container-projects">

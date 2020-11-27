@@ -1,36 +1,46 @@
 import React, { useState } from 'react';
-import firebase from 'firebase/app';
+import { firebase } from '../firebaseInit';
 import 'firebase/firestore';
 import AddingRisk from '../components/addingRisk';
 import './addingProject.css';
 
 export default function addingProject() {
+  const newUser = JSON.parse(localStorage.getItem('newUser'));
   const db = firebase.firestore();
-  console.log(db);
-
+  // Project data queda como el objeto final de nuevo proyecto
   const [projectData, setProjectData] = useState({});
-  // Este va a ser el array con todos los riesgos
+  // Project risk es para la sección de riesgos
   const [projectRisks, setProjectRisks] = useState([]);
   // handlers form
   const handleSubmit = (event) => {
     event.preventDefault();
+    event.target.reset();
     console.log('aquí va el objetito a firebase: ', projectData);
+
+    // PERDÓN QUE HAGA TODO ACÁ ES PARA MÁS RAPIDIN :((((
+    db.collection('proyectines')
+      .add(projectData)
+      .then((e) => {
+        alert('Nuevo proyecto enviado!', e);
+      })
+      .catch(console.error);
   };
 
   const handleChanges = (e, key) => {
     projectData[key] = e.target.value;
-    setProjectData({ ...projectData, risks: projectRisks });
+    setProjectData({ ...projectData, risks: projectRisks, owner: newUser.displayName });
   };
 
-  const handleRisks = (e, key) => {
-    console.log(e.target.value, projectRisks, key);
+  const handleRisks = (e) => {
+    console.log(e, setProjectRisks);
     // riskTemp[key] = e;
-    // projectRisks.push(riskTemp);
-    setProjectRisks({ ...projectRisks });
+    // projectRisks.push(e);
+    // setProjectRisks({ ...projectRisks });
   };
 
-  const addNewRisk = () => {
+  const addNewRisk = (e) => {
     console.log('Añadiendo un nuevo riesgo...');
+    setProjectRisks(projectRisks.push(e));
   };
 
   return (
@@ -45,6 +55,7 @@ export default function addingProject() {
             type="text"
             placeholder="Ingresa nombre del proyecto"
             className="project-name"
+            required
             onChange={(e) => { handleChanges(e, 'name'); }}
           />
         </label>
@@ -52,6 +63,7 @@ export default function addingProject() {
         <label htmlFor="project-description">
           DESCRIPCIÓN
           <textarea
+            required
             onChange={(e) => { handleChanges(e, 'description'); }}
             placeholder="Cuéntanos más acerca del proyecto"
             className="project-description" />
@@ -61,6 +73,7 @@ export default function addingProject() {
           <label htmlFor="project-client-name">
             CLIENTE
             <input
+              required
               onChange={(e) => { handleChanges(e, 'clientname'); }}
               placeholder="¿Quién hizo la solicitud?"
               type="text"
@@ -70,6 +83,7 @@ export default function addingProject() {
           <label htmlFor="project-area">
             ÁREA
             <input
+              required
               onChange={(e) => { handleChanges(e, 'area'); }}
               placeholder="¿A que área pertenece?"
               type="text"
@@ -79,19 +93,12 @@ export default function addingProject() {
           <label htmlFor="project-start-date">
             FECHA DE LANZAMIENTO
             <input
-              onChange={(e) => { handleChanges(e, 'startdate'); }}
+              required
+              onChange={(e) => { handleChanges(e, 'startingDate'); }}
               type="date"
               className="project-start-date" />
           </label>
         </div>
-
-        <label htmlFor="project-recomendation">
-          RECOMENDACIÓN
-          <textarea
-            onChange={(e) => { handleChanges(e, 'recomendation'); }}
-            placeholder="Escribe la recomendación inicial para este proyecto"
-            className="project-recomendation" />
-        </label>
 
         <AddingRisk handleRisks={handleRisks} addNewRisk={addNewRisk} />
 
