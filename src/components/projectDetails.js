@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 
-// import { getADocument } from '../API/crud';
+import { getADocument } from '../API/crud';
 import './projectDetails.css';
 import Recomendaciones from './recomendaciones';
 import obj from '../API/data/schema';
@@ -18,7 +18,7 @@ export default function projectDetails() {
   // eslint-disable-next-line no-unused-vars
   const [object, setObject] = useState(obj[0]);// projecto
   const [risks, setRisks] = useState([]); // Risks
-  // const [prueba, setPrueba] = useState({});
+  const [prueba, setPrueba] = useState({});
   const history = useHistory();
   const { id } = useParams();
   // const [project, setProject] = useState({});
@@ -28,10 +28,10 @@ export default function projectDetails() {
   useEffect(() => {
     // console.log(project);
     if (id) {
-      // getADocument(id, 'projectos')
-      //   .then((doc) => (doc.exists ? console.log(doc) : console.log('No such document!')))
-      //   .catch((error) => console.log('Error getting document:', error));
-      // console.log(prueba);
+      getADocument(id, 'projectos')
+        .then((doc) => (doc.exists ? setPrueba({ ...doc.data() }) : console.log('No such document!')))
+        .catch((error) => console.log('Error getting document:', error));
+      console.log(prueba);
     }
     // console.log(prueba);
   }, [id]);
@@ -102,7 +102,9 @@ export default function projectDetails() {
 
           </button>
           <div className="download details-button">
-            <PDFDownloadLink document={<MyDocument project={object} risks={risks} />} fileName={`${object.name}.pdf`}>
+            <PDFDownloadLink
+              // document={<MyDocument project={object} risks={risks} />}
+              fileName={`${object.name}.pdf`}>
               {({
                 loading,
               }) => (loading ? 'Loading document...' : 'Download now!')}

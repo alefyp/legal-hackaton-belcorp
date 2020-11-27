@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 
 // Create Document Component
 const MyDocument = ({ project }) => {
-  const grouped = groupBy(project.risks, 'type');
+  const grouped = groupBy(project.risks, 'countries');
   const types = Object.keys(grouped);
   return (
     <Document>
@@ -53,10 +53,39 @@ const MyDocument = ({ project }) => {
             project.recomendations.map((r) => <Text key={r.content}>{r.content}</Text>)
         }
           {
-            //   console.log(grouped['Riesgo Consumidor'])
-// console.log(grouped)
-              console.log(types)
-        // grouped.forEach((obj) => console.log(obj))
+              types.map((type) => grouped[type].map((e, i) => (
+                <View key={`${e.title}0923${i}`}>
+                  <Text
+                  >
+                    {`> ${e.type}`}
+
+                  </Text>
+                  <Text
+                  >
+                    {`+ ${e.level}`}
+
+                  </Text>
+                  {
+                    e.countries.map((c) => (
+                      <Text key={`${c}0923${i}`}
+                  >
+                        {`- ${c}, `}
+
+                      </Text>
+                    ))
+                  }
+                  {
+                    e.attachments.map((a) => (
+                      <Text key={`${a.title}0923${i}`}
+                  >
+                        {`- ${a.title}, `}
+
+                      </Text>
+                    ))
+                  }
+                </View>
+              )))
+
         }
         </View>
       </Page>

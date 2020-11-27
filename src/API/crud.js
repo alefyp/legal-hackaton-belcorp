@@ -39,7 +39,7 @@ const listenAllDocs = (callback, dataset) => {
 };
 const getADocument = (docID, collectionName) => firebase
   .firestore()
-  .collection(collectionName).doc(docID);
+  .collection(collectionName).doc(docID).get();
 
 export {
   sendCCI,
