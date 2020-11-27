@@ -1,7 +1,7 @@
 .container-sections{
     grid-area: 2 / 2 / 13 / 13;
     display: flex;
-
+    overflow: auto;
 }
 
 .container-projects h2{
