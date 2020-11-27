@@ -2,6 +2,7 @@
 /* eslint-disable */
 import React from 'react';
 import './projectList.css';
+import { Link } from 'react-router-dom';
 import Lupita from '../Assets/Icons/Lupa.svg';
 
 import photo1 from '../Assets/photos/alessandraVinateaAlePhoto.svg';
@@ -21,7 +22,9 @@ export default function ProjectCards({ project, ph}) {
       </div>
         <button type="button" className="btn-verMas">
           <img src={Lupita} alt="search-update" />
-          Ver Más
+          <Link to={`/dashboard/project${project.id}`}>
+            Ver Más
+          </Link>
         </button>
       </div>
     </div>

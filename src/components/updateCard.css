@@ -9,6 +9,9 @@
     justify-content: space-around;
 }
 
+.user-updates p{
+    font-style: italic;
+}
 /* .container-img-profile{
     display: flex;
     justify-content: center;

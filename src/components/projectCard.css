@@ -39,6 +39,7 @@
     width: 70px;
     height: 70px;
     border-radius: 8px;
+    border:  1px solid #91A1BE;
 }
 
 .container-imgs {

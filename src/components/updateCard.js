@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import './updateCard.css';
+import { Link } from 'react-router-dom';
 
 export default function updateCard({ project, ph }) {
   return (
@@ -11,7 +12,13 @@ export default function updateCard({ project, ph }) {
         <p>22 Nov</p>
       </div>
       <p>{project.update}</p>
-      <div className="container-span"><span type="link">Ver más</span></div>
+      <div className="container-span">
+        <span type="link">
+          <Link to={`/dashboard/project${project.id}`}>
+            Ver más
+          </Link>
+        </span>
+      </div>
     </div>
   );
 }
