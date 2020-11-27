@@ -1,20 +1,24 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './updateCard.css';
-import logo from '../Assets/Icons/logo-Belcorp-main.svg';
+import { Link } from 'react-router-dom';
 
-export default function updateCard() {
-  const newUser = JSON.parse(localStorage.getItem('newUser'));
+export default function updateCard({ project, ph }) {
   return (
     <div className="container-update">
       <div className="user-updates">
-        <div>
-          <p>25 Nov</p>
-        </div>
-        <div className="container-img-profile"><img src={logo} alt="icono" /></div>
-        <h3>{newUser.displayName}</h3>
+        <div className="container-img-profile"><img src={ph} alt="icono" /></div>
+        <h3>{project.name}</h3>
+        <p>22 Nov</p>
       </div>
-      <p>Actualizó Términos y condiciones en proyecto Mi tienda web</p>
-      <div className="container-span"><span type="link">Ver más</span></div>
+      <p>{project.update}</p>
+      <div className="container-span">
+        <span type="link">
+          <Link to={`/dashboard/project${project.id}`}>
+            Ver más
+          </Link>
+        </span>
+      </div>
     </div>
   );
 }

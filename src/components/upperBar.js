@@ -1,4 +1,5 @@
 import React from 'react';
+import personPhoto from '../Assets/photos/alessandraVinateaAlePhoto.svg';
 
 import './upperBar.css';
 
@@ -10,7 +11,7 @@ export default function UpperBar() {
       <nav className="upperBar">
         <h1>Legal Keeper</h1>
         <ul>
-          <li><img src={newUser.photoURL} alt="img-person" /></li>
+          <li><img src={personPhoto} alt="img-person" /></li>
           <li>{newUser.displayName}</li>
         </ul>
       </nav>
