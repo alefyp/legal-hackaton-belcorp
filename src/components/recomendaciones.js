@@ -6,7 +6,7 @@ import './recomendaciones.css';
 
 export default function Recomendaciones({ arr, setStatus, setReco }) {
   return (
-    <div className="scrolling-Box">
+    <div className="scrolling-Box-temporal">
       <table className="table-reco ">
         <thead>
           <tr>

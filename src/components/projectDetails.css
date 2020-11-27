@@ -31,18 +31,8 @@
   color: #786565;
   margin: 1rem 0;
 }
-.scrolling-Box {
-  width: 100%;
-  overflow-x: auto;
-  color: #786565;
-  font-size: 1rem;
-  /* height: 15rem; */
-  /* height: 48vh; */
-  /* height: 8rem; */
-  /* background-color: aqua; */
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
-}
+
+
 .scrolling-Box::-webkit-scrollbar {
   width: 0.3rem;
 }
