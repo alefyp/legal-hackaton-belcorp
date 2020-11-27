@@ -14,14 +14,14 @@ import MyDocument from './MyDocument';
 // import schema from
 
 export default function projectDetails() {
-  const [filterCountry, setFilterCountry] = useState('');
+  const [filterCountry, setFilterCountry] = useState('Todos');
   // eslint-disable-next-line no-unused-vars
   const [object, setObject] = useState(obj[0]);// projecto
   const [risks, setRisks] = useState([]); // Risks
+  // eslint-disable-next-line no-unused-vars
   const [prueba, setPrueba] = useState({});
   const history = useHistory();
   const { id } = useParams();
-  // const [project, setProject] = useState({});
   const [status, setStatus] = useState(false);
   const [reco, setReco] = useState('');
 
@@ -29,7 +29,7 @@ export default function projectDetails() {
     // console.log(project);
     if (id) {
       getADocument(id, 'projectos')
-        .then((doc) => (doc.exists ? setPrueba({ ...doc.data() }) : console.log('No such document!')))
+        .then((doc) => (doc.exists ? console.log({ ...doc.data() }) : console.log('No such document!')))
         .catch((error) => console.log('Error getting document:', error));
       console.log(prueba);
     }
@@ -88,11 +88,11 @@ export default function projectDetails() {
 
           />
         {console.log(risks)}
-        <Risks arr={risks} filterCountry={filterCountry} />
+        <Risks arr={filterCountry === 'Todos' ? object.risks : risks} filterCountry={filterCountry} />
         <h3 className="subtitleStyle">ARCHIVOS ADJUNTOS</h3>
         <p className="subtitle-description">Descarga, revisa o elimina</p>
 
-        <Attachments arr={risks} />
+        <Attachments arr={filterCountry === 'Todos' ? object.risks : risks} />
         <div className="button-box-layout">
           <button
             type="button"
@@ -103,11 +103,11 @@ export default function projectDetails() {
           </button>
           <div className="download details-button">
             <PDFDownloadLink
-              // document={<MyDocument project={object} risks={risks} />}
+              document={<MyDocument project={object} risks={risks} />}
               fileName={`${object.name}.pdf`}>
               {({
                 loading,
-              }) => (loading ? 'Loading document...' : 'Download now!')}
+              }) => (loading ? 'DESCARGANDO...' : 'DESCARGA')}
             </PDFDownloadLink>
           </div>
           {/* <button
