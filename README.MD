@@ -1,10 +1,10 @@
 # Legal Keeper - Legal Hackaton Laboratoria-Belcorp 2020
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created by frontend developers: Aleja, Paula y Maríale, guided by Eliane as UX designer.
 
 ## Available Scripts
 
-In the project directory, you can run:
+Legal Keeper is a Belcorp application that will be used in legal 
 
 ### `yarn start`
 
