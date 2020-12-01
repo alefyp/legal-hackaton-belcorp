@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Legal Keeper - Legal Hackaton Laboratoria-Belcorp 2020
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
