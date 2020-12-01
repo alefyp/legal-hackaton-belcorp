@@ -2,9 +2,18 @@
 
 This project was created by frontend developers: Aleja, Paula y Maríale, guided by Eliane as UX designer.
 
-## Available Scripts
+## Índice
 
-Legal Keeper is a Belcorp application that will be used in legal 
+* [1. Objetivo del proyecto](#1-definición-del-producto)
+* [2. Definición del producto](#2-definición-del-producto)
+* [3. Investigación UX](#3-investigación-ux)
+* [4. Historia de usuarios](#4-historia-de-usuarios)
+* [5. Prototipos](#5-prototipos)
+* [6. Contribuyentes](#6-contribuyentes)
+* [7. Bibliografía](#7-bibliografía)
+
+Legal Keeper is a Belcorp application.
+## Available Scripts
 
 ### `yarn start`
 
