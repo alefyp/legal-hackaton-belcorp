@@ -24,6 +24,9 @@ Legal Keeper is a legal team network in Belcorp. Legal team attend all projects 
 ## 4. Prototypes
 
 ## 5. Team
+[Alejandra Ibáñez](https://github.com/marialejandraip)
+[Paula P.](https://github.com/paula113)
+[Alejandra Pérez](https://github.com/alefyp)
 
 
 
