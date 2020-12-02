@@ -1,5 +1,5 @@
 # Legal Keeper - Legal Hackaton Laboratoria-Belcorp 2020
-<p align="center"> <img src="src/Assets/Icons/header.svg" width="1000" height="300"> </p>
+<p align="center"> <img src="src/Assets/title.png" width="1000"> </p>
 
 This project was created by frontend developers: [Paula P](https://github.com/paula113),  [Alejandra Pérez](https://github.com/alefyp), [Alejandra Ibáñez](https://github.com/marialejandraip),  guided by Eliane as UX designer.
 
@@ -21,7 +21,13 @@ Legal Keeper is a legal team network in Belcorp. Legal team attend all projects 
 
 ## 3. UX research
 
+
+
+
 ## 4. Prototypes
+<p align="center"> <img src="src/Assets/paleta de colores.png" width="1000"> </p>
+
+<p align="center"> <img src="src/Assets/tarjetitas.png" width="1000"> </p>
 <p align="center"> <img src="src/Assets/Icons/loginprototypes.svg" width="1000" > </p>
 <p align="center"> <img src="src/Assets/Icons/gridprototypes.svg" width="1000" > </p>
 <p align="center"> <img src="src/Assets/Icons/listprototypes.svg" width="1000" > </p>
