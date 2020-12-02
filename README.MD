@@ -26,8 +26,7 @@ Legal Keeper is a legal team network in Belcorp. Legal team attend all projects 
 
 ## 4. Prototypes
 <p align="center"> <img src="src/Assets/paleta de colores.png" width="1000"> </p>
-
-<p align="center"> <img src="src/Assets/tarjetitas.png" width="1000"> </p>
+<p align="center"> <img src="src/Assets/tarjetitas.png" width="500"> </p>
 <p align="center"> <img src="src/Assets/Icons/loginprototypes.svg" width="1000" > </p>
 <p align="center"> <img src="src/Assets/Icons/gridprototypes.svg" width="1000" > </p>
 <p align="center"> <img src="src/Assets/Icons/listprototypes.svg" width="1000" > </p>
