@@ -20,8 +20,8 @@ Legal Keeper is a legal team network in Belcorp. Legal team attend all projects 
 
 ## 3. UX research
 
-[Figma: Prototype](https://www.figma.com/file/FT1BioWjCbGOF1QbHgbyBi/Belcorp-Legal-Hackathon?node-id=0%3A1)
-[Figma: Usability test](https://www.figma.com/proto/FT1BioWjCbGOF1QbHgbyBi/Belcorp-Legal-Hackathon?node-id=369%3A53090&viewport=254%2C105%2C0.038111068308353424&scaling=scale-down-width)
+- [Figma: Prototype](https://www.figma.com/file/FT1BioWjCbGOF1QbHgbyBi/Belcorp-Legal-Hackathon?node-id=0%3A1)
+- [Figma: Usability test](https://www.figma.com/proto/FT1BioWjCbGOF1QbHgbyBi/Belcorp-Legal-Hackathon?node-id=369%3A53090&viewport=254%2C105%2C0.038111068308353424&scaling=scale-down-width)
 
 ## 4. Prototypes
 
