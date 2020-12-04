@@ -1,15 +1,24 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './updateCard.css';
-import Store from '../Assets/Icons/storestore.svg';
+import { Link } from 'react-router-dom';
 
-export default function updateCard() {
+export default function updateCard({ project, ph }) {
   return (
     <div className="container-update">
       <div className="user-updates">
-        <div className="container-img-profile"><img src={Store} alt="icono" /></div>
-        <h3>Nombre del usuario</h3>
+        <div className="container-img-profile"><img src={ph} alt="icono" /></div>
+        <h3>{project.name}</h3>
+        <p>22 Nov</p>
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+      <p>{project.update}</p>
+      <div className="container-span">
+        <span type="link">
+          <Link to={`/dashboard/project${project.id}`}>
+            Ver más
+          </Link>
+        </span>
+      </div>
     </div>
   );
 }

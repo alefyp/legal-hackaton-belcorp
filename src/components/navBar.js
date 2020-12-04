@@ -10,10 +10,13 @@ import Proyectos from '../Assets/Icons/Proyectos.svg';
 import Agregar from '../Assets/Icons/Agregar.svg';
 import Perfil from '../Assets/Icons/Perfil.svg';
 import Salir from '../Assets/Icons/Salir.svg';
+
+import ProjectDetails from './projectDetails';
+import ProjectView from '../views/projectView';
+import AddingProject from '../views/addingProject';
 import { signOut } from '../API/authentications';
 
 import './navBar.css';
-import ProjectView from '../views/projectView';
 
 export default function NavBar(viewComponent, setViewComponent) {
   console.log(viewComponent, setViewComponent);
@@ -22,9 +25,9 @@ export default function NavBar(viewComponent, setViewComponent) {
       <nav className="navBar">
         <ul>
           <li>
-            <Link to="/dashboard">
-              <img src={Logo} alt="Logo" className="Logo" />
-            </Link>
+            {/* <Link to="/dashboard"> */}
+            <img src={Logo} alt="Logo" className="Logo" />
+            {/* </Link> */}
           </li>
           <li>
             <Link to="/dashboard">
@@ -54,10 +57,11 @@ export default function NavBar(viewComponent, setViewComponent) {
           <ProjectView />
         </Route>
         <Route path="/Agregar">
-          <h2>/Agregar</h2>
+          <AddingProject />
         </Route>
-        <Route path="/Perfil">
-          <h2>/Perfil</h2>
+        <Route path="/dashboard/project:id">
+          <ProjectDetails />
+
         </Route>
         {/* <Route path="/Salir">
           <h2>/Salir</h2>

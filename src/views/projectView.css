@@ -1,7 +1,10 @@
 .container-sections{
     grid-area: 2 / 2 / 13 / 13;
     display: flex;
-
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
 .container-projects h2{
@@ -12,23 +15,89 @@
 .container-projects{
     /* no cambies este 70% */
     width: 70%;
-    padding: 20px;
-}
-
-.header-projects{
-    display: flex;
-}
-
-.card-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    padding: 35px;
     overflow: auto;
-    height: 75vh;
-    margin: 10px 0;
 }
+
+/* .header-projects{
+    display: flex;
+} */
 
 .container-updates{
     /* no cambies este 30% */
-    width: 30%; 
+    width: 30%;
+    height: 100%;
+    overflow: auto;
+    /* height: 75vh; */
 }
+
+.container-header-updates{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-header-updates button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin:0 10px 0 10px;  
+}
+
+.container-cards{
+    padding:25px;
+    height: 75vh;
+}
+
+.scrolling-Box {
+    color: #786565;
+    font-size: 1rem;
+    overflow: auto;
+    height: 100%;
+    margin: 10px 0;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .scrolling-Box::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+  
+  .scrolling-Box::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  
+  .scrolling-Box::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .container-updates::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+
+  .container-updates::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  .container-updates::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .container-projects::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+
+  
+  .container-projects::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  .container-projects::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+

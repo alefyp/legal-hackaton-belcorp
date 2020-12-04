@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import Login from './views/login';
 import Dashboard from './views/dashboard';
-import auth from './firebaseInit';
+import { auth } from './firebaseInit';
 
 function LoggedInRoute({ children, isUserLoggedIn, ...rest }) {
   return (
@@ -31,7 +31,7 @@ function NonLoggedInRoute({ children, isUserLoggedIn, ...rest }) {
         if (!isUserLoggedIn) {
           return <>{children}</>;
         }
-        return <Redirect to="/dasboard" />;
+        return <Redirect to="/dashboard" />;
       }}
     />
   );
@@ -40,18 +40,13 @@ function NonLoggedInRoute({ children, isUserLoggedIn, ...rest }) {
 function App() {
   // valor inicial de isUserLoggedIn es false
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        // const {
-        //   displayName, email, emailVerified, photoURL, uid,
-        // } = user;
+        localStorage.setItem('newUser', JSON.stringify(user));
         setIsUserLoggedIn(true);
-
-        console.log(user);
       } else {
         setIsUserLoggedIn(false); // cambiar a false
         console.log('no está logueado');
@@ -68,7 +63,7 @@ function App() {
         <NonLoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/">
           <Login />
         </NonLoggedInRoute>
-        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dasboard">
+        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dashboard">
           <Dashboard />
         </LoggedInRoute>
         <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/Agregar">
@@ -77,7 +72,7 @@ function App() {
         <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/Perfil">
           <Dashboard />
         </LoggedInRoute>
-        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dasboard:id">
+        <LoggedInRoute isUserLoggedIn={isUserLoggedIn} exact path="/dashboard/project:id">
           <Dashboard />
         </LoggedInRoute>
       </Switch>

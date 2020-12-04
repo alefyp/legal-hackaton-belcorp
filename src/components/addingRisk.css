@@ -1,0 +1,116 @@
+
+
+/* Parte de los riesgos LLEVARME ESTO AL OTRO CSS*/
+
+/* LA TABLAAAAAAAA */
+/* .risk-table input{
+  margin-top: -20px;
+} */
+
+.risk-table select{
+  margin-top: 20px;
+}
+
+
+.risk-table{
+  border-bottom: 1px solid #C4C4C4;
+  overflow-x: auto;
+}
+
+.add-risk-add-new{
+  fill: #605151;
+  width: 45px;
+  padding: 10px;
+}
+
+.new-line-add-risk{
+  background: none;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin: 10px 0;;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.new-line-add-risk:hover{
+  background: whitesmoke;
+}
+
+
+.adding-risk-attachments{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  overflow-x: auto;
+}
+.adding-risk-attachments table{
+  width: 100%;
+  text-align: center;
+}
+
+.adding-risk-countries{
+  border-bottom: 1px solid #C4C4C4;
+}
+
+
+/* el checkbox */
+
+/* termina la tablaaaaaaaaaaaaaaaa de tipos de riesgo */
+
+.adding-project-new-risk{
+  border: 1px solid #C4C4C4;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.adding-project-new-risk p{
+  font-style: italic;
+}
+
+.adding-risk-aux_text{
+  color: #91A1BE;
+  margin: 20px 0;
+}
+
+.adding-risk-countries{
+  width: 350px;
+}
+
+.adding-risk-grabar-section{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+
+.adding-risk-grabar-section p{
+  font-size: 22px;
+  width: 65%;
+  padding-right: 20px;
+  
+}
+
+.adding-risk-grabar-section button, .adding-project-final-buttons button{
+  background: #91A1BE;
+  border: 1px solid #91A1BE;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin: 10px;
+  font-size: 22px;
+}
+
+.adding-project-final-buttons{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+
+.add-risk-delete-button{
+  background: none;
+  border: none;
+}
