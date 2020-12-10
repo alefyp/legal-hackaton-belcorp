@@ -15,7 +15,7 @@ This project was created by frontend developers: [Paula P](https://github.com/pa
 Legal Keeper is a tool that works as a repository of projects evaluated and allows to manage in an efficient way, the risks and the recommendations provided throughout the process.
 
 ## 2. Product
-Legal Keeper is a legal team network in Belcorp. Legal team attend all projects over 14 contries in the world and need the best way to respond and save information about the projects. Legal keeper includes the resume of analysis and result of legal appraisal for the new projects in Belcorp Company, update every kind of change that will be inside the project in the legal way and share it to the client. 
+Legal Keeper is a Belcorp legal team network. Legal team attend all projects over 14 contries in the world and need the best way to respond and save information about the projects. Legal keeper includes the resume of analysis and result of legal appraisal for the new projects in Belcorp Company, update every kind of change that will be inside the project in the legal way and share it to the client. 
 <p align="center"> <img src="src/Assets/Icons/ezgif.com-gif-maker.gif" width="1000" > </p>
 
 ## 3. UX research
